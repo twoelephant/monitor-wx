@@ -1,4 +1,63 @@
 /**index.wxss**/
-/* .container{
+.index {
+	height: 100%;
+	background-color: #ec5d63;
+	color: #fdf4f0;
+}
+.index .fit{
+	height: 35rpx;
+	background-color: #ec5d63;
 
-} */
+}
+
+.index .top {
+	background-color: #ec5d63;
+	height: 64rpx;
+	display: flex;
+	padding-top: 65rpx;
+	padding-left: 10rpx;
+	padding-right: 10rpx;
+
+}
+
+.index .top .row1 {
+	display: flex;
+}
+
+.index .top .row1 view {
+	font-size: 35rpx;
+}
+
+.index .top .row2 {
+	margin-left: 142rpx;
+	font-size: 35rpx;
+
+}
+
+.index .top .row1 image {
+	width: 40rpx;
+	height: 40rpx;
+}
+
+/* 这是一个分界线 */
+.index .top1 {
+	padding-top: 50rpx;
+	display: flex;
+}
+.index .top1 .row1{
+	font-size: 35rpx;
+	width: 375rpx;
+	height: 162rpx;
+	text-align: center;
+
+}
+.index .top1 .row2 {
+	font-size: 35rpx;
+	width: 375rpx;
+	height: 162rpx;
+	text-align: center;
+}
+.index .top1 image {
+	width: 100rpx;
+	height: 100rpx;
+}
