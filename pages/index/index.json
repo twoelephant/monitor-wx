@@ -1,8 +1,7 @@
 {
-  "usingComponents": {},
-  
+  "usingComponents": {
+	
+  },
   "navigationStyle":"custom",
- 
- 
   "navigationBarBackgroundColor": "#ec5d63"
 }

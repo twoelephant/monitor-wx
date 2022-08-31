@@ -1,3 +1,4 @@
+
 <!-- index.wxml -->
 <view class="index">
 
@@ -28,3 +29,8 @@
 
 
 </view>
+
+
+
+<!-- <navigation-bar default-data="{{defaultData}}"></navigation-bar> -->
+
