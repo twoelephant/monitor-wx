@@ -1,2 +1,91 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view style="background-color:#f2f2f2 ;">
+<view class="mymessage">
+  <view class="userab">
+    <image class="myavater" />
+    <view class="user">
+      <view class="nickname"> 小程序用户</view>
+      <view class="viplv">普通会员</view>
+    </view>
+    <image class="myerwei" src="../image/二维码.png" />
+  </view>
+  <view class="useruse">
+    <view>0<view>可用积分</view>
+    </view>
+    <view>0<view>优惠券</view>
+    </view>
+    <view>0<view>账户余额</view>
+    </view>
+  </view>
+  <view class="usertext"><text>开通会员，专享权益</text><text class="userlink">立刻开通>></text></view>
+</view>
+<view class="buyding">
+    <text>我的订单</text>
+    <text class="buylink">查看全部订单 ></text>
+  </view>
+<view class='userbuy'>
+  <view>
+    <image class="pictuer" src='../image/付款.png' />
+    请付款
+  </view>
+  <view>
+    <image class="pictuer" src='../image/报价单.png' />
+    预售
+  </view>
+  <view>
+    <image class="pictuer" src='../image/收货.png' />
+    待收货
+  </view>
+  <view>
+    <image class="pictuer" src='../image/自提.png' />
+    待自提
+  </view>
+  <view>
+    <image class="pictuer" src='../image/电脑-01.png' />
+    售后
+  </view>
+</view>
+
+<view class="service">
+  <view class="buyding">
+    <text>我的服务</text>
+    
+  </view>
+  <view class='userservice'>
+  <view>
+    <image class="pictuer" src='../image/优惠券.png' />
+    领券中心
+  </view>
+  <view>
+    <image class="pictuer" src='../image/权益.png' />
+    权益卡
+  </view>
+  <view>
+    <image class="pictuer" src='../image/自助充值.png' />
+    自助充值
+  </view>
+  <view>
+    <image class="pictuer" src='../image/无人自助.png' />
+    无人自助
+  </view>
+  <view>
+    <image class="pictuer" src='../image/收货地址.png' />
+    收货地址
+  </view>
+  <view>
+    <image class="pictuer" src='../image/分销员.png' />
+   分销员
+  </view>
+  <view>
+    <image class="pictuer" src='../image/线下密码.png' />
+    线下密码
+  </view>
+  <view>
+    <image class="pictuer" src='../image/附近.png' />
+   附近门店
+  </view>
+</view>
+</view>
+</view>
+<page-meta>
+  <navigation-bar title="{{nbTitle}}" front-color="{{nbFrontColor}}" background-color="{{nbBackgroundColor}}" color-animation-duration="2000" color-animation-timing-func="easeIn" />
+</page-meta>
