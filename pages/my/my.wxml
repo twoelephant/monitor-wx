@@ -1,3 +1,4 @@
+
 <view style="background-color:#f2f2f2 ;">
 <view class="mymessage">
   <view class="userab">
@@ -89,3 +90,5 @@
 <page-meta>
   <navigation-bar title="{{nbTitle}}" front-color="{{nbFrontColor}}" background-color="{{nbBackgroundColor}}" color-animation-duration="2000" color-animation-timing-func="easeIn" />
 </page-meta>
+
+

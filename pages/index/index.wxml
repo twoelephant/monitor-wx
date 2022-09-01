@@ -1,23 +1,35 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+
+<!-- index.wxml -->
+<view class="index">
+
+	<view class="fit" wx:if="{{fit}}"></view><!-- 刘海屏时加一个占位的标签 -->
+	<view class="top">
+		<view class="row1">
+			<view>
+				<image src="../image/dingwei.png" />
+			</view>
+
+			<view bindtap="">切换门店</view>
+		</view>
+		<view class="row2">{{shopName}}</view>
+	</view>
+
+	<view class="top1">
+		<view  class="row1">
+			<image src="../image/saoyidao.png"></image>
+			<view>扫一扫</view>
+		</view>
+		<view  class="row2">
+			<image src="../image/chongzhi.png"></image>
+			<view>会员充值</view>
+		</view>
+
+
+	</view>
+
+
 </view>
+
+
+
+
