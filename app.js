@@ -5,7 +5,8 @@ App({
     menuRight: 0, //胶囊距右方间距（方保持左、右间距一致）,暂时无用
     menuTop: 0, // 胶囊距顶部间距   ,用了
     menuHeight: 0, // 胶囊高度（自定义内容可与胶囊高度保证一致） ,用了
-    // userInfo: null
+    userInfo: null, //通过微信获取到的用户头像和用户名等信息
+    code: null, //通过wx.login获得的临时登录凭证，用来传给后台获取用户手机号
   },
   onLaunch() {
 
@@ -30,7 +31,22 @@ App({
     // 登录
     wx.login({
       success: res => {
-        console.log(res)
+        // console.log(res)
+        that.globalData.code = res.code
+        // console.log(that.globalData.code)
+
+        /* 做一个请求传递code到后台获取用户手机号 */
+        // wx.request({
+        //   url: '',
+        //   method: 'post',
+        //   success(res) {
+        //     console.log(res)
+        //     this.setData({
+        //       loginOk: true
+        //     })
+        //   }
+        // })
+
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })

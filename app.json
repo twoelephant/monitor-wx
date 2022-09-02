@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
     "pages/cart/cart",
     "pages/my/my"
+
   ],
   "tabBar": {
     "color": "black",
