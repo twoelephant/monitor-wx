@@ -14,7 +14,8 @@ Component({
         navBarHeight: app.globalData.navBarHeight,
         menuRight: app.globalData.menuRight,
         menuTop: app.globalData.menuTop,
-        menuHeight: app.globalData.menuHeight,
+		menuHeight: app.globalData.menuHeight,
+		shopName:"店铺名称"
     },
     attached: function () {
 
