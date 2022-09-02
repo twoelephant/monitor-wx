@@ -23,7 +23,7 @@ Page({
 		nickName: '',
 		hasUserInfo:false,//是否获取到用户信息，默认为false
 		loginOk:false,    //后台登录状态，默认为false
-
+		
 		// hasUserInfo: true, //是否获取到用户信息，默认为false
 		// loginOk: true, //后台登录状态，默认为false，登录ok后要显示  扫码进店页面
 		// enter: false, //进门状态，false为未进入，true已经进入
@@ -68,11 +68,7 @@ Page({
 
 	},
 
-	handelclick1() {
-		wx.navigateTo({
-			url: '../aa/index',
-		})
-	},
+
 
 
 	onLoad() {

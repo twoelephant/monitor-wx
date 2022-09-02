@@ -202,7 +202,7 @@
 	width: 40rpx;
 	height: 100%;
 	background: #ffffff;
-	/* z-index: 99; */
+	z-index: 99;
 }
 /* 自带无用 */
 /* .right-text {
