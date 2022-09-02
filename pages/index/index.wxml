@@ -83,8 +83,8 @@
 
 </view>
 
-<!-- 进入页面的弹窗 -->
-<block wx:if="{{!hasUserInfo}}">
+<!-- 进入页面的弹窗，登录页面 -->
+<!-- <block wx:if="{{!hasUserInfo}}">
 	<view class="falogin" catchtouchmove='false'></view>
 	<view class="login">
 		<view class="faimage1">
@@ -97,44 +97,81 @@
 		<view class="lr1"> 安全登录确认</view>
 		<button bindtap="getUserProfile" style="width: 80%;">登录</button>
 	</view>
-</block>
+</block> -->
 
 <!-- 扫码进店、呼叫客服页面 -->
-<block wx:if="{{loginOk}}">
+<block wx:if="{{loginOk && !enter}}">
 	<view class="falogin" catchtouchmove='false'></view>
 	<view class="faenter">
-		<!-- <view style="width: 100%; margin: 0 auto;"> -->
 
 		<view class="enter">
 			<view class="view1">
-				<view style="margin-top: 20rpx;">
-					<image src="../image/hujiao.png" style="margin: 0 auto; display: block;"></image>
+				<view style="margin-top: 40rpx;">
+					<image src="../image/hujiao1.png" style="margin: 0 auto; display: block;"></image>
 					<view style="text-align: center;">呼叫客服</view>
 				</view>
 
 			</view>
 			<view class="view2">
-				<view style="margin-top: 25rpx;">
+				<view style="margin-top: 40rpx;">
 					<image src="../image/kaimen.png" style="margin: 0 auto; display: block;"></image>
-					<view style="text-align: center;">扫码进店</view>
-
-				</view>>
-
-
+					<view style="text-align: center;" bindtap="enterClick">扫码进店</view>
+				</view>
 			</view>
 		</view>
 
-
-
 		<view class="faimage3">
-			<image src="../image/guanbi1.png"></image>
+			<image src="../image/guanbi1.png" bindtap="cancleClick1"></image>
 
 		</view>
 
-		<!-- </view> -->
+	</view>
 
+</block>
+
+<!-- 扫码出店、呼叫客服页面 -->
+<block wx:if="{{loginOk && enter}}">
+	<view class="falogin" catchtouchmove='false'></view>
+	<view class="faenter">
+
+		<view class="enter">
+			<view class="view1">
+				<view style="margin-top: 40rpx;">
+					<image src="../image/hujiao1.png" style="margin: 0 auto; display: block;"></image>
+					<view style="text-align: center;">呼叫客服</view>
+				</view>
+
+			</view>
+			<view class="view2">
+				<view style="margin-top: 40rpx;">
+					<image src="../image/kaimen.png" style="margin: 0 auto; display: block;"></image>
+					<view style="text-align: center;">扫码出店</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="faimage3">
+			<image src="../image/guanbi1.png" bindtap="cancleClick1"></image>
+
+		</view>
 
 	</view>
 
+</block>
 
+<!-- 提示是否开启了无人售货模式的页面 -->
+<block wx:if="{{!hasUserInfo}}">
+	<view class="falogin1" catchtouchmove='false'></view>
+	<view class="login1">
+		<view class="faimage11">
+			<image src="../image/guanbi.png" class="image11" bindtap="cancleClick"></image>
+		</view>
+
+		<image src="../image/kaimen2.png" class="image21"></image>
+
+		<view class="lr11"> 当前门店未开启无人零售</view>
+		<view class="lr11"> 暂时无法扫码开门</view>
+		<view class="button">我知道啦</view>
+		
+	</view>
 </block>

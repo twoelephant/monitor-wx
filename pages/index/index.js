@@ -19,42 +19,58 @@ Page({
 		wrapWidth: 0,
 
 		//用户信息
-		avatar:'', 
-		nickName:'',
-		// hasUserInfo:false,//是否获取到用户信息，默认为false
-		// loginOk:false,    //后台登录状态，默认为false
-		hasUserInfo:true,//是否获取到用户信息，默认为false
-		loginOk:true,    //后台登录状态，默认为false
+		avatar: '',
+		nickName: '',
+		hasUserInfo:false,//是否获取到用户信息，默认为false
+		loginOk:false,    //后台登录状态，默认为false
+
+		// hasUserInfo: true, //是否获取到用户信息，默认为false
+		// loginOk: true, //后台登录状态，默认为false，登录ok后要显示  扫码进店页面
+		// enter: false, //进门状态，false为未进入，true已经进入
+		// goout: false, //是否出门
 	},
 
-	cancleClick(){
+	cancleClick() {
 		//点击取消后给登录状态设置为真，让登录弹窗消失
 		this.setData({
-			hasUserInfo:true
+			hasUserInfo: true
 		})
+	},
+	cancleClick1() {
+		this.setData({
+				loginOk: false,
+				enter: false,
+			})
+	},
+
+	enterClick() {
+		this.setData({
+			enter:true
+		})
+
 	},
 	getUserProfile(e) {
 		// 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
 		wx.getUserProfile({
-		  desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-		  success: (res) => {
-			// console.log(res)
-			this.setData({
-			  hasUserInfo: true , //给登录状态设置为真
-			  loginOk:true
-			}),
-			app.globalData.userInfo=res.userInfo
-		
-			// console.log(app.globalData.userInfo)
-		  }
+			desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+			success: (res) => {
+				// console.log(res)
+				this.setData({
+						hasUserInfo: true, //给登录状态设置为真
+						loginOk: true
+					}),
+					app.globalData.userInfo = res.userInfo
+
+				// console.log(app.globalData.userInfo)
+			}
 		})
 
-		
-	  },
 
-	handelclick1(){
+	},
+
+	handelclick1() {
 		wx.navigateTo({
-		  url: '../aa/index',
+			url: '../aa/index',
 		})
 	},
 
@@ -97,7 +113,7 @@ Page({
 		this.setData({
 			timer: null
 		})
-		
+
 	},
 	//卸载定时器
 	destroyTimer() {
