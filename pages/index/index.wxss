@@ -1,63 +1,225 @@
 /**index.wxss**/
-.index {
-	height: 100%;
-	background-color: #ec5d63;
-	color: #fdf4f0;
-}
-.index .fit{
-	height: 35rpx;
-	background-color: #ec5d63;
-
+.faIndex {
+	background-color: #f2f2f2;
 }
 
-.index .top {
-	background-color: #ec5d63;
-	height: 64rpx;
+.nav-bar {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	color: #fff;
+	background: #ec5d63;
+	z-index: 10000;
+}
+
+.nav-bar .top {
+
 	display: flex;
-	padding-top: 65rpx;
-	padding-left: 10rpx;
-	padding-right: 10rpx;
-
+	/* padding-left: 10rpx; */
+	/* padding-right: 10rpx; */
+	margin: 0 10rpx;
+	width: 100%;
 }
 
-.index .top .row1 {
+.nav-bar .top .row1 {
 	display: flex;
 }
 
-.index .top .row1 view {
-	font-size: 35rpx;
+.nav-bar .top .row1 view {
+	font-size: 32rpx;
+	/* line-height: 32px; */
+	line-height: 2;
 }
 
-.index .top .row2 {
-	margin-left: 142rpx;
-	font-size: 35rpx;
+.nav-bar .top .row2 {
+	margin-left: 133rpx;
+	font-size: 32rpx;
+	line-height: 2;
+
+	/* line-height: 32px; */
 
 }
 
-.index .top .row1 image {
+.nav-bar .top .row1 image {
 	width: 40rpx;
 	height: 40rpx;
+	display: inline-block;
+	vertical-align: middle;
+	/* margin-top: 12rpx; */
 }
 
+
+.faIndex .index {
+	/* height: 100%; */
+	background-color: #ec5d63;
+	color: #fdf4f0;
+	padding-bottom: 100rpx;
+	border-bottom-left-radius: 30rpx;
+	border-bottom-right-radius: 30rpx;
+}
+
+
+
 /* 这是一个分界线 */
-.index .top1 {
+.faIndex .index .top1 {
 	padding-top: 50rpx;
 	display: flex;
 }
-.index .top1 .row1{
+
+.faIndex .index .top1 .row1 {
 	font-size: 35rpx;
 	width: 375rpx;
 	height: 162rpx;
 	text-align: center;
 
 }
-.index .top1 .row2 {
+
+.faIndex .index .top1 .row2 {
 	font-size: 35rpx;
 	width: 375rpx;
 	height: 162rpx;
 	text-align: center;
 }
-.index .top1 image {
+
+.faIndex .index .top1 image {
 	width: 100rpx;
 	height: 100rpx;
+}
+
+
+.faIndex .index1 {
+	position: relative;
+	margin: 0 15rpx;
+	top: -60rpx;
+	height: 250rpx;
+	border-radius: 30rpx;
+	background-color: #ffffff;
+}
+
+.faIndex .index1 .text {
+	padding-top: 20rpx;
+	text-align: center;
+	font-size: 35rpx;
+
+	/* font-weight: 550; */
+	/* font-weight:bold; */
+}
+
+.faIndex .index1 .text1 {
+	display: flex;
+	/* background-color: red; */
+	padding-top: 10rpx;
+	/* height: 100rpx; */
+	width: 75%;
+	margin: 0 auto;
+}
+
+.faIndex .index1 .text1 .text2 {
+	width: 60rpx;
+	height: 60rpx;
+	background-color: #e5c942;
+	color: #ffffff;
+	text-align: center;
+	line-height: 60rpx;
+	font-size: 45rpx;
+	border-radius: 35rpx;
+	/* margin: 0 auto; */
+}
+
+.faIndex .index1 .text1 .text3 {
+	height: 6rpx;
+	width: 100rpx;
+	margin-top: 27rpx;
+	background-color: #e5c942;
+}
+
+.faIndex .index1 .step {
+
+	width: 90%;
+	display: flex;
+	/* padding-left: 40rpx; */
+	padding-top: 10rpx;
+	margin: 0 auto;
+}
+
+.faIndex .index1 .step view {
+	/* margin: 0 20rpx; */
+	/* width: 80%; */
+	flex: 1;
+	text-align: center;
+}
+
+
+
+
+/* .faIndex .notice image{
+	width: 40rpx;
+	height: 40rpx;
+	margin-left: 15rpx;
+	margin-top: 20rpx;
+} */
+
+.faIndex .advertise {
+	background-color: #f2f2f2;
+	position: relative;
+	top: -20rpx;
+	width: 100%;
+
+}
+
+.faIndex .advertise image {
+	display: block;
+	border-radius: 30rpx;
+	height: 500rpx;
+	width: 730rpx;
+	margin: 0 auto;
+}
+
+/* 自动播放滚动条样式 */
+.faIndex .notice {
+	position: relative;
+	top: -40rpx;
+	display: flex;
+	align-content: center;
+	background: #ffffff;
+	padding: 10rpx 15rpx;
+	border-radius: 40rpx;
+
+	/* 自带无用 */
+	/* justify-content: space-between; */
+}
+.left-box {
+	position: relative;
+	width: 100%;
+
+	/* 自带无用 */
+	/* display: flex;
+	align-items: center; */
+}
+.left-text {
+	position: absolute;
+	left: 0;
+	width: 40rpx;
+	height: 100%;
+	background: #ffffff;
+	z-index: 99;
+}
+/* 自带无用 */
+/* .right-text {
+	position: absolute;
+	right: -1rpx;
+	width: 40rpx;
+	height: 100%;
+	background-color: red;
+	background: linear-gradient(to left,rgba(241,241,241,1),rgba(241,241,241,0));
+	z-index: 99;
+  } */
+.content-box {
+	overflow: hidden;
+	width: calc(100% - 40rpx);
+}
+.content-text {
+	color: #5e5e5e;
+	white-space: nowrap;
+	font-size: 28rpx;
 }

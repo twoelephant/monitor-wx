@@ -1,35 +1,90 @@
-
+<!-- <navigation-bar default-data="{{defaultData}}"></navigation-bar> -->
 <!-- index.wxml -->
-<view class="index">
 
-	<view class="fit" wx:if="{{fit}}"></view><!-- 刘海屏时加一个占位的标签 -->
-	<view class="top">
-		<view class="row1">
-			<view>
-				<image src="../image/dingwei.png" />
+
+<view class="faIndex">
+
+	<view class=".nav-bar" style="height:{{navBarHeight}}px;">
+		<view class="top" style="min-height:{{menuHeight}}px;position: fixed;top:{{menuTop}}px ;">
+			<view class="row1">
+				<view>
+					<image src="../image/dingwei1.png" />
+				</view>
+
+				<view bindtap="">切换门店</view>
+			</view>
+			<view class="row2">{{shopName}}</view>
+		</view>
+	</view>
+	<view style="height:{{navBarHeight}}px;"></view>
+
+
+
+	<view class="index">
+		<view class="top1">
+			<view class="row1">
+				<image src="../image/saoyidao.png"></image>
+				<view>扫一扫</view>
+			</view>
+			<view class="row2">
+				<image src="../image/chongzhi.png"></image>
+				<view>会员充值</view>
+			</view>
+		</view>
+	</view>
+
+
+
+	<view class="index1">
+		<view class="text">折扣牛超市购物流程</view>
+		<view class="text1">
+
+			<view class="text2"> 1 </view>
+			<view class="text3"> </view>
+
+			<view class="text2"> 2 </view>
+			<view class="text3"> </view>
+
+			<view class="text2"> 3 </view>
+			<view class="text3"> </view>
+
+			<view class="text2"> 4 </view>
+
+		</view>
+
+		<view class="step">
+			<view>扫码进店</view>
+			<view>选择商品</view>
+			<view>自助收银</view>
+			<view>开门离店</view>
+		</view>
+
+	</view>
+
+	<view class="notice">
+		<!-- <image src="../image/laba.png"></image> -->
+		<view class="left-box">
+			<view class="left-text">
+				<image src="../image/laba.png" style="width: 40rpx;height: 40rpx;"></image>
 			</view>
 
-			<view bindtap="">切换门店</view>
+			<view class='content-box'>
+				<view class='content-text' animation="{{animationData}}"><text id="text">{{text}}</text></view>
+			</view>
+
+			<!-- <view class="right-text"></view> -->
+
 		</view>
-		<view class="row2">{{shopName}}</view>
 	</view>
 
-	<view class="top1">
-		<view  class="row1">
-			<image src="../image/saoyidao.png"></image>
-			<view>扫一扫</view>
-		</view>
-		<view  class="row2">
-			<image src="../image/chongzhi.png"></image>
-			<view>会员充值</view>
-		</view>
-
-
+	<view class="advertise">
+		<image src="../image/image1.png"></image>
 	</view>
-
 
 </view>
 
 
-
-
+<!-- 
+<view class='swiper-item'>{{title}}</view>
+<view class='swiper-item'>{{title}}</view>
+<view class='swiper-item'>{{title}}</view> -->
