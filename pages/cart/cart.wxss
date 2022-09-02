@@ -1,0 +1,78 @@
+/* pages/cart/cart.wxss */
+.bigwai{
+  height: 92vh;
+  overflow: auto;
+}
+.goods{
+  display: flex;
+  height: 18vh;
+  border-bottom: 1px solid #666666;
+  font-size: 4vw;
+  z-index: 1;
+  box-sizing: border-box;
+}
+.goodsmessage{
+  flex:1;
+  display: flex;
+  margin-left: 2vw;
+  width: 98vw;
+  height: 18vh;
+}
+.goodsmessage .goodsimg{
+  width: 20vw;
+  height: 20vw;
+  margin: auto 0;
+}
+.goodsname{
+  margin: auto 0;
+  margin-left: 2vw;
+  flex:1;
+}
+
+.goodsname .goodsprice{
+  display: flex;
+}
+.money{
+  flex: 1;
+  font-size: 5vw;
+  color: #f21a0c;
+}
+.changenum{
+  width: 20vw;
+  display: flex;
+}
+.changenum text{
+  font-size: 5vw;
+  height: 6vw;
+  line-height: 6vw;
+}
+.num{
+  width: 10vw;
+  height: 6vw;
+  background-color: #f2f2f2;
+  margin:0 1vw;
+  text-align: center;
+}
+
+.balance{
+  position: absolute;
+  bottom:0;
+  z-index: 2;
+  background-color: #fff;
+  height: 5vh;
+  padding: 2vw;
+  line-height: 5vh;
+  display: flex;
+  font-size: 4vw;
+}
+.balance view{
+  background-color: #f21a0c;
+  width: 15vw;
+  height: 5vh;
+  border-radius: 2.5vh;
+  color: #fff;
+  text-align: center;
+  line-height: 5vh;
+  margin: auto 0;
+  margin-left: 50vw;
+}

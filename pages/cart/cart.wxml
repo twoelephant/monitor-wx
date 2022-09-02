@@ -1,0 +1,29 @@
+<page-meta>
+  <navigation-bar title="购物车" front-color="{{nbFrontColor}}" background-color="{{nbBackgroundColor}}" color-animation-duration="2000" color-animation-timing-func="easeIn" />
+</page-meta>
+<view class="bigwai">
+  <view class="goods" wx:for="{{goods}}" wx:key="index">
+    <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" data-id="{{item.id}}">
+      <view class="goodsmessage">
+        <image class="goodsimg" src="{{item.src}}" />
+        <view class="goodsname">
+          <text> {{item.name}}</text>
+          <view>商品信息</view>
+          <view class="goodsprice">
+            <text class="money"> ￥{{item.price}}</text>
+            <view class="changenum">
+              <text wx:if="{{item.num != 1}}" style="color: black;" data-id="{{item.id}}" bindtap="down">-</text>
+              <text wx:if="{{item.num == 1}}" style="color: #f3f3f3;">-</text>
+              <view class="num">{{item.num}}</view>
+              <text data-id="{{item.id}}" bindtap="up">+</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </mp-slideview>
+  </view>
+</view>
+
+<view class="balance"><text>总计：￥{{total}}</text>
+  <view bindtap="jiesuan">结算</view>
+</view>
