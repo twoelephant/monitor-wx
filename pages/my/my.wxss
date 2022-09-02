@@ -1,1 +1,106 @@
-/* pages/my/my.wxss */
+.mymessage{
+  width: 100%;
+  background-color: #ffffff;
+}
+.userab{
+  width: 100%;
+  display: flex;
+  background-color: #ec5d63;
+  height: 13vh;
+  padding: 5vw 3vw;
+}
+.myavater{
+  background-color: #ffffff;
+  height: 12vh;
+  width: 12vh;
+  border-radius: 6vh;
+}
+.user{
+  
+  flex: 0.9;
+  margin-left: 3%;
+  margin-top: 1vh;
+}
+.nickname{
+  color: #ffffff;
+  font-size: 3.5vw;
+}
+.viplv{
+  background-color: #000000;
+  color: #ffffff;
+  width: 13vw;
+  margin-top: 3vh;
+  font-size: 3vw;
+  border-radius: 1vh;
+  padding: 0.5vw;
+}
+.myerwei{
+  width: 8vh;
+  height: 8vh;
+  margin: auto 0 ;
+}
+.useruse{
+  display: flex;
+  color: #cc6472;
+  margin: 2vh 0;
+  font-size: 3vw;
+}
+.useruse view{
+  margin:auto;
+  text-align: center;
+}
+.usertext{
+  letter-spacing: 2px;
+  background-color: #efb4b8;
+  padding: 4vw;
+  color: #e66a6a;
+  font-size: 3vw;
+}
+.userlink{
+  margin: 0 0 0 35vw;
+}
+.buyding{
+  background-color: #ffffff;
+  margin-top: 3vh;
+  width: 100vw;
+  padding: 3vw;
+  border-bottom: 0.1vh solid #ececec;
+  letter-spacing: 1px;
+  font-size: 3.5vw;
+}
+.buylink{
+  margin-left: 45vw;
+  color: #bebebe;
+  
+}
+.userbuy{
+  background-color: #ffffff;
+  display: flex;
+  padding: 2vh;
+}
+
+.pictuer{
+  margin: 2vh 5vw 0;
+  width: 8vw;
+  height: 8vw;
+}
+.userbuy view{
+  width: 20vw;
+  text-align: center;
+  font-size: 2.8vw;
+  letter-spacing: 2px;
+}
+.service{
+  background-color: #ffffff;
+}
+.userservice{
+  display: flex;
+  flex-wrap: wrap;
+}
+.userservice view{
+  width: 20vw;
+  text-align: center;
+  font-size: 2.8vw;
+  letter-spacing: 2px;
+  padding: 2vw;
+}

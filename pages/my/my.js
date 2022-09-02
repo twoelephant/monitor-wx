@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    
+      nbFrontColor: '#000000',
+      nbBackgroundColor: '#ffffff',
+    
   },
 
   /**
@@ -13,6 +16,10 @@ Page({
    */
   onLoad(options) {
 
+    this.setData({
+      nbTitle: '我的',  
+     
+    })
   },
 
   /**
