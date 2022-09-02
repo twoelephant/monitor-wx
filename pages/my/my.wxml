@@ -49,41 +49,13 @@
 <view class="service">
   <view class="buyding">
     <text>我的服务</text>
-    
   </view>
   <view class='userservice'>
-  <view>
-    <image class="pictuer" src='../image/优惠券.png' />
-    领券中心
+  <view wx:for="{{imglist}}" wx:key="index">
+    <image class="pictuer" src='{{item.src}}' />
+    {{item.text}}
   </view>
-  <view>
-    <image class="pictuer" src='../image/权益.png' />
-    权益卡
-  </view>
-  <view>
-    <image class="pictuer" src='../image/自助充值.png' />
-    自助充值
-  </view>
-  <view>
-    <image class="pictuer" src='../image/无人自助.png' />
-    无人自助
-  </view>
-  <view>
-    <image class="pictuer" src='../image/收货地址.png' />
-    收货地址
-  </view>
-  <view>
-    <image class="pictuer" src='../image/分销员.png' />
-   分销员
-  </view>
-  <view>
-    <image class="pictuer" src='../image/线下密码.png' />
-    线下密码
-  </view>
-  <view>
-    <image class="pictuer" src='../image/附近.png' />
-   附近门店
-  </view>
+  
 </view>
 </view>
 </view>

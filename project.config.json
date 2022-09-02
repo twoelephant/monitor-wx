@@ -44,9 +44,9 @@
     "useCompilerPlugins": false,
     "ignoreUploadUnusedFiles": false
   },
-  "compileType": "miniprogram",
+  "compileType": "game",
   "libVersion": "2.19.4",
-  "appid": "wx58fcb19966e2faed",
+  "appid": "wx0eb2b89342f1117d",
   "projectname": "miniprogram-92",
   "condition": {},
   "editorSetting": {
