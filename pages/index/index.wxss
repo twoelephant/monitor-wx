@@ -202,7 +202,7 @@
 	width: 40rpx;
 	height: 100%;
 	background: #ffffff;
-	z-index: 99;
+	/* z-index: 99; */
 }
 /* 自带无用 */
 /* .right-text {
@@ -222,4 +222,106 @@
 	color: #5e5e5e;
 	white-space: nowrap;
 	font-size: 28rpx;
+}
+
+/* 登录块样式 */
+.falogin{
+	position: fixed;
+	top: 0;
+	min-height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.7;
+	z-index: 100;
+}
+.login{
+	position: fixed;
+	top: 20%;
+	left: 10%;
+	background-color: #ffffff;
+	width: 80%;
+	/* height: 60%; */
+	opacity: 1;
+	color: #969696;
+	border-radius: 20rpx;
+	z-index: 200;
+
+}
+.login .faimage1{
+	width: 100%;
+	height: 40rpx;
+
+}
+.login .faimage1 .image1{
+	display: block;
+	width: 40rpx;
+	height: 40rpx;
+	
+	float: right;
+	margin: 5rpx 5rpx;
+}
+.login  .image2{
+	display: block;
+	width: 400rpx;
+	height: 400rpx ;
+	background-color: red;
+	margin: 10rpx auto ;
+}
+.login .lr1{
+	width: 40%;
+	margin: 0 auto;
+	padding: 10rpx 0;
+	text-align: center;
+}
+.login button{
+	background-color: #ec5d63;
+	color: #ffffff;
+	margin: 30rpx auto;
+	border-radius: 40rpx;
+}
+
+/* 扫码进店、呼叫客服页面 */
+.faenter{
+	position: fixed;
+	top: 40%;
+	width: 100%;
+	/* height: 40%; */
+	/* background-color: #ffffff; */
+	opacity: 1;
+	z-index: 200;
+}
+.faenter .enter{
+	display: flex;
+	width: 62%;
+	margin: 0 auto;
+
+}
+.faenter .enter .view1{
+	background-color: #efa53c;
+	width: 200rpx;
+	height: 200rpx;
+	border-radius: 200rpx;
+}
+.faenter .enter .view1 image{
+	width: 100rpx;
+	height: 100rpx;
+}
+.faenter .enter .view2{
+	background-color: #ec5d63;
+	width: 200rpx;
+	height: 200rpx;
+	border-radius: 200rpx;
+	margin-left: 60rpx;
+
+}
+.faenter .enter .view2 image{
+	width: 100rpx;
+	height: 100rpx;
+}
+.faenter .faimage3 image{
+	width: 65rpx;
+	height: 65rpx;
+	display: block;
+	margin: 0 auto;
+
 }

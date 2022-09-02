@@ -4,6 +4,7 @@
 
 <view class="faIndex">
 
+	<!-- 导航栏 -->
 	<view class=".nav-bar" style="height:{{navBarHeight}}px;">
 		<view class="top" style="min-height:{{menuHeight}}px;position: fixed;top:{{menuTop}}px ;">
 			<view class="row1">
@@ -38,7 +39,6 @@
 	<view class="index1">
 		<view class="text">折扣牛超市购物流程</view>
 		<view class="text1">
-
 			<view class="text2"> 1 </view>
 			<view class="text3"> </view>
 
@@ -49,9 +49,7 @@
 			<view class="text3"> </view>
 
 			<view class="text2"> 4 </view>
-
 		</view>
-
 		<view class="step">
 			<view>扫码进店</view>
 			<view>选择商品</view>
@@ -61,30 +59,82 @@
 
 	</view>
 
+	<!-- 公告 -->
 	<view class="notice">
-		<!-- <image src="../image/laba.png"></image> -->
 		<view class="left-box">
 			<view class="left-text">
 				<image src="../image/laba.png" style="width: 40rpx;height: 40rpx;"></image>
 			</view>
-
 			<view class='content-box'>
 				<view class='content-text' animation="{{animationData}}"><text id="text">{{text}}</text></view>
 			</view>
-
 			<!-- <view class="right-text"></view> -->
-
 		</view>
 	</view>
 
+	<!-- 广告 -->
 	<view class="advertise">
 		<image src="../image/image1.png"></image>
 	</view>
 
+	<view class='swiper-item'>{{text}}</view>
+	<view class='swiper-item'>{{text}}</view>
+	<view class='swiper-item'>{{text}}</view>
+
 </view>
 
+<!-- 进入页面的弹窗 -->
+<block wx:if="{{!hasUserInfo}}">
+	<view class="falogin" catchtouchmove='false'></view>
+	<view class="login">
+		<view class="faimage1">
+			<image src="../image/guanbi.png" class="image1" bindtap="cancleClick"></image>
+		</view>
 
-<!-- 
-<view class='swiper-item'>{{title}}</view>
-<view class='swiper-item'>{{title}}</view>
-<view class='swiper-item'>{{title}}</view> -->
+		<image src="" class="image2"></image>
+
+		<view class="lr1">无人自助</view>
+		<view class="lr1"> 安全登录确认</view>
+		<button bindtap="getUserProfile" style="width: 80%;">登录</button>
+	</view>
+</block>
+
+<!-- 扫码进店、呼叫客服页面 -->
+<block wx:if="{{loginOk}}">
+	<view class="falogin" catchtouchmove='false'></view>
+	<view class="faenter">
+		<!-- <view style="width: 100%; margin: 0 auto;"> -->
+
+		<view class="enter">
+			<view class="view1">
+				<view style="margin-top: 20rpx;">
+					<image src="../image/hujiao.png" style="margin: 0 auto; display: block;"></image>
+					<view style="text-align: center;">呼叫客服</view>
+				</view>
+
+			</view>
+			<view class="view2">
+				<view style="margin-top: 25rpx;">
+					<image src="../image/kaimen.png" style="margin: 0 auto; display: block;"></image>
+					<view style="text-align: center;">扫码进店</view>
+
+				</view>>
+
+
+			</view>
+		</view>
+
+
+
+		<view class="faimage3">
+			<image src="../image/guanbi1.png"></image>
+
+		</view>
+
+		<!-- </view> -->
+
+
+	</view>
+
+
+</block>

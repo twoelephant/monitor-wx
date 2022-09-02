@@ -17,20 +17,67 @@ Page({
 		duration: 0,
 		textWidth: 0,
 		wrapWidth: 0,
+
+		//用户信息
+		avatar:'', 
+		nickName:'',
+		// hasUserInfo:false,//是否获取到用户信息，默认为false
+		// loginOk:false,    //后台登录状态，默认为false
+		hasUserInfo:true,//是否获取到用户信息，默认为false
+		loginOk:true,    //后台登录状态，默认为false
+	},
+
+	cancleClick(){
+		//点击取消后给登录状态设置为真，让登录弹窗消失
+		this.setData({
+			hasUserInfo:true
+		})
+	},
+	getUserProfile(e) {
+		// 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+		wx.getUserProfile({
+		  desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+		  success: (res) => {
+			// console.log(res)
+			this.setData({
+			  hasUserInfo: true , //给登录状态设置为真
+			  loginOk:true
+			}),
+			app.globalData.userInfo=res.userInfo
+		
+			// console.log(app.globalData.userInfo)
+		  }
+		})
+
+		
+	  },
+
+	handelclick1(){
+		wx.navigateTo({
+		  url: '../aa/index',
+		})
 	},
 
 
 	onLoad() {
+		const _this = this
 		this.setData({
 			menuHeight: app.globalData.menuHeight,
 			menuTop: app.globalData.menuTop,
 			navBarHeight: app.globalData.navBarHeight
 		})
 
-		// wx.setNavigationBarTitle({
-		// 	/* 动态设置NavigationBarTitle */
-		// 	title: this.data.shopName,
-		// })
+		// wx.getUserInfo({ 
+		// 	不能用了
+		// 	// lang: lang,
+		// 	// withCredentials: true,
+		// 	success: (result) => {
+		// 		console.log(result)
+		// 		_this.setData({
+		// 			avatar:result.userInfo.avatarUrl
+		// 		})
+		// 	},
+		//   })
 	},
 
 
@@ -50,6 +97,7 @@ Page({
 		this.setData({
 			timer: null
 		})
+		
 	},
 	//卸载定时器
 	destroyTimer() {
