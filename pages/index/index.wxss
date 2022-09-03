@@ -1,152 +1,152 @@
 /**index.wxss**/
 .faIndex {
-	background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 .nav-bar {
-	position: fixed;
-	width: 100%;
-	top: 0;
-	color: #fff;
-	background: #ec5d63;
-	z-index: 10000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  color: #fff;
+  background: #ec5d63;
+  z-index: 10000;
 }
 
 .nav-bar .top {
 
-	display: flex;
-	/* padding-left: 10rpx; */
-	/* padding-right: 10rpx; */
-	margin: 0 10rpx;
-	width: 100%;
+  display: flex;
+  /* padding-left: 10rpx; */
+  /* padding-right: 10rpx; */
+  margin: 0 10rpx;
+  width: 100%;
 }
 
 .nav-bar .top .row1 {
-	display: flex;
+  display: flex;
 }
 
 .nav-bar .top .row1 view {
-	font-size: 32rpx;
-	/* line-height: 32px; */
-	line-height: 2;
+  font-size: 32rpx;
+  /* line-height: 32px; */
+  line-height: 2;
 }
 
 .nav-bar .top .row2 {
-	margin-left: 133rpx;
-	font-size: 32rpx;
-	line-height: 2;
+  margin-left: 133rpx;
+  font-size: 32rpx;
+  line-height: 2;
 
-	/* line-height: 32px; */
+  /* line-height: 32px; */
 
 }
 
 .nav-bar .top .row1 image {
-	width: 40rpx;
-	height: 40rpx;
-	display: inline-block;
-	vertical-align: middle;
-	/* margin-top: 12rpx; */
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  vertical-align: middle;
+  /* margin-top: 12rpx; */
 }
 
 
 .faIndex .index {
-	/* height: 100%; */
-	background-color: #ec5d63;
-	color: #fdf4f0;
-	padding-bottom: 100rpx;
-	border-bottom-left-radius: 30rpx;
-	border-bottom-right-radius: 30rpx;
+  /* height: 100%; */
+  background-color: #ec5d63;
+  color: #fdf4f0;
+  padding-bottom: 100rpx;
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
 }
 
 
 
 /* 这是一个分界线 */
 .faIndex .index .top1 {
-	padding-top: 50rpx;
-	display: flex;
+  padding-top: 50rpx;
+  display: flex;
 }
 
 .faIndex .index .top1 .row1 {
-	font-size: 35rpx;
-	width: 375rpx;
-	height: 162rpx;
-	text-align: center;
+  font-size: 35rpx;
+  width: 375rpx;
+  height: 162rpx;
+  text-align: center;
 
 }
 
 .faIndex .index .top1 .row2 {
-	font-size: 35rpx;
-	width: 375rpx;
-	height: 162rpx;
-	text-align: center;
+  font-size: 35rpx;
+  width: 375rpx;
+  height: 162rpx;
+  text-align: center;
 }
 
 .faIndex .index .top1 image {
-	width: 100rpx;
-	height: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
 }
 
 
 .faIndex .index1 {
-	position: relative;
-	margin: 0 15rpx;
-	top: -60rpx;
-	height: 250rpx;
-	border-radius: 30rpx;
-	background-color: #ffffff;
+  position: relative;
+  margin: 0 15rpx;
+  top: -60rpx;
+  height: 250rpx;
+  border-radius: 30rpx;
+  background-color: #ffffff;
 }
 
 .faIndex .index1 .text {
-	padding-top: 20rpx;
-	text-align: center;
-	font-size: 35rpx;
+  padding-top: 20rpx;
+  text-align: center;
+  font-size: 35rpx;
 
-	/* font-weight: 550; */
-	/* font-weight:bold; */
+  /* font-weight: 550; */
+  /* font-weight:bold; */
 }
 
 .faIndex .index1 .text1 {
-	display: flex;
-	/* background-color: red; */
-	padding-top: 10rpx;
-	/* height: 100rpx; */
-	width: 75%;
-	margin: 0 auto;
+  display: flex;
+  /* background-color: red; */
+  padding-top: 10rpx;
+  /* height: 100rpx; */
+  width: 75%;
+  margin: 0 auto;
 }
 
 .faIndex .index1 .text1 .text2 {
-	width: 60rpx;
-	height: 60rpx;
-	background-color: #e5c942;
-	color: #ffffff;
-	text-align: center;
-	line-height: 60rpx;
-	font-size: 45rpx;
-	border-radius: 35rpx;
-	/* margin: 0 auto; */
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #e5c942;
+  color: #ffffff;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 45rpx;
+  border-radius: 35rpx;
+  /* margin: 0 auto; */
 }
 
 .faIndex .index1 .text1 .text3 {
-	height: 6rpx;
-	width: 100rpx;
-	margin-top: 27rpx;
-	background-color: #e5c942;
+  height: 6rpx;
+  width: 100rpx;
+  margin-top: 27rpx;
+  background-color: #e5c942;
 }
 
 .faIndex .index1 .step {
 
-	width: 90%;
-	display: flex;
-	/* padding-left: 40rpx; */
-	padding-top: 10rpx;
-	margin: 0 auto;
+  width: 90%;
+  display: flex;
+  /* padding-left: 40rpx; */
+  padding-top: 10rpx;
+  margin: 0 auto;
 }
 
 .faIndex .index1 .step view {
-	/* margin: 0 20rpx; */
-	/* width: 80%; */
-	flex: 1;
-	text-align: center;
+  /* margin: 0 20rpx; */
+  /* width: 80%; */
+  flex: 1;
+  text-align: center;
 }
 
 
@@ -160,50 +160,53 @@
 } */
 
 .faIndex .advertise {
-	background-color: #f2f2f2;
-	position: relative;
-	top: -20rpx;
-	width: 100%;
+  background-color: #f2f2f2;
+  position: relative;
+  top: -20rpx;
+  width: 100%;
 
 }
 
 .faIndex .advertise image {
-	display: block;
-	border-radius: 30rpx;
-	height: 500rpx;
-	width: 730rpx;
-	margin: 0 auto;
+  display: block;
+  border-radius: 30rpx;
+  height: 500rpx;
+  width: 730rpx;
+  margin: 0 auto;
 }
 
 /* 自动播放滚动条样式 */
 .faIndex .notice {
-	position: relative;
-	top: -40rpx;
-	display: flex;
-	align-content: center;
-	background: #ffffff;
-	padding: 10rpx 15rpx;
-	border-radius: 40rpx;
+  position: relative;
+  top: -40rpx;
+  display: flex;
+  align-content: center;
+  background: #ffffff;
+  padding: 10rpx 15rpx;
+  border-radius: 40rpx;
 
-	/* 自带无用 */
-	/* justify-content: space-between; */
+  /* 自带无用 */
+  /* justify-content: space-between; */
 }
-.left-box {
-	position: relative;
-	width: 100%;
 
-	/* 自带无用 */
-	/* display: flex;
+.left-box {
+  position: relative;
+  width: 100%;
+
+  /* 自带无用 */
+  /* display: flex;
 	align-items: center; */
 }
+
 .left-text {
-	position: absolute;
-	left: 0;
-	width: 40rpx;
-	height: 100%;
-	background: #ffffff;
-	z-index: 99;
+  position: absolute;
+  left: 0;
+  width: 40rpx;
+  height: 100%;
+  background: #ffffff;
+  z-index: 99;
 }
+
 /* 自带无用 */
 /* .right-text {
 	position: absolute;
@@ -215,173 +218,332 @@
 	z-index: 99;
   } */
 .content-box {
-	overflow: hidden;
-	width: calc(100% - 40rpx);
+  overflow: hidden;
+  width: calc(100% - 40rpx);
 }
+
 .content-text {
-	color: #5e5e5e;
-	white-space: nowrap;
-	font-size: 28rpx;
+  color: #5e5e5e;
+  white-space: nowrap;
+  font-size: 28rpx;
 }
 
 /* 登录块样式 */
-.falogin{
-	position: fixed;
-	top: 0;
-	min-height: 100%;
-	width: 100%;
-	background-color: black;
-	opacity: 0.7;
-	z-index: 100;
+.falogin {
+  position: fixed;
+  top: 0;
+  min-height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 100;
 }
-.login{
-	position: fixed;
-	top: 30%;
-	left: 10%;
-	background-color: #ffffff;
-	width: 80%;
-	/* height: 60%; */
-	opacity: 1;
-	color: #969696;
-	border-radius: 20rpx;
-	z-index: 200;
+
+.login {
+  position: fixed;
+  top: 30%;
+  left: 10%;
+  background-color: #ffffff;
+  width: 80%;
+  /* height: 60%; */
+  opacity: 1;
+  color: #969696;
+  border-radius: 20rpx;
+  z-index: 200;
 
 }
-.login .faimage1{
-	width: 100%;
-	height: 60rpx;
+
+.login .faimage1 {
+  width: 100%;
+  height: 60rpx;
 
 }
-.login .faimage1 .image1{
-	display: block;
-	width: 60rpx;
-	height: 60rpx;
-	
-	float: right;
-	margin: 5rpx 5rpx;
+
+.login .faimage1 .image1 {
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+
+  float: right;
+  margin: 5rpx 5rpx;
 }
-.login  .image2{
-	display: block;
-	width: 400rpx;
-	height: 400rpx ;
-	background-color: red;
-	margin: 10rpx auto ;
+
+.login .image2 {
+  display: block;
+  width: 400rpx;
+  height: 400rpx;
+  background-color: red;
+  margin: 10rpx auto;
 }
-.login .lr1{
-	width: 40%;
-	margin: 0 auto;
-	padding: 10rpx 0;
-	text-align: center;
+
+.login .lr1 {
+  width: 40%;
+  margin: 0 auto;
+  padding: 10rpx 0;
+  text-align: center;
 }
-.login button{
-	background-color: #ec5d63;
-	color: #ffffff;
-	margin: 30rpx auto;
-	border-radius: 40rpx;
+
+.login button {
+  background-color: #ec5d63;
+  color: #ffffff;
+  margin: 30rpx auto;
+  border-radius: 40rpx;
 }
 
 /* 扫码进店、呼叫客服页面 */
-.faenter{
-	position: fixed;
-	top: 40%;
-	width: 100%;
-	color: #ffffff;
-	/* height: 40%; */
-	/* background-color: #ffffff; */
-	opacity: 1;
-	z-index: 200;
+.faenter {
+  position: fixed;
+  top: 40%;
+  width: 100%;
+  color: #ffffff;
+  /* height: 40%; */
+  /* background-color: #ffffff; */
+  opacity: 1;
+  z-index: 200;
 }
-.faenter .enter{
-	display: flex;
-	width: 62%;
-	margin: 0 auto;
+
+.faenter .enter {
+  display: flex;
+  width: 62%;
+  margin: 0 auto;
 
 }
-.faenter .enter .view1{
-	background-color: #efa53c;
-	width: 200rpx;
-	height: 200rpx;
-	border-radius: 200rpx;
+
+.faenter .enter .view1 {
+  background-color: #efa53c;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 200rpx;
 }
-.faenter .enter .view1 image{
-	width: 80rpx;
-	height: 80rpx;
+
+.faenter .enter .view1 image {
+  width: 80rpx;
+  height: 80rpx;
 }
-.faenter .enter .view2{
-	background-color: #ec5d63;
-	width: 200rpx;
-	height: 200rpx;
-	border-radius: 200rpx;
-	margin-left: 60rpx;
+
+.faenter .enter .view2 {
+  background-color: #ec5d63;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 200rpx;
+  margin-left: 60rpx;
 
 }
-.faenter .enter .view2 image{
-	width: 80rpx;
-	height: 80rpx;
+
+.faenter .enter .view2 image {
+  width: 80rpx;
+  height: 80rpx;
 }
-.faenter .faimage3 image{
-	width: 65rpx;
-	height: 65rpx;
-	display: block;
-	margin: 0 auto;
+
+.faenter .faimage3 image {
+  width: 65rpx;
+  height: 65rpx;
+  display: block;
+  margin: 0 auto;
 
 }
 
 
 /*提示现在不是无人售货模式页面的样式 */
-.falogin1{
-	position: fixed;
-	top: 0;
-	min-height: 100%;
-	width: 100%;
-	background-color: black;
-	opacity: 0.7;
-	z-index: 100;
+.falogin1 {
+  position: fixed;
+  top: 0;
+  min-height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 100;
 }
-.login1{
-	position: fixed;
-	top: 30%;
-	left: 10%;
-	background-color: #ffffff;
-	width: 80%;
-	/* height: 60%; */
-	opacity: 1;
-	color: #969696;
-	border-radius: 20rpx;
-	z-index: 200;
+
+.login1 {
+  position: fixed;
+  top: 30%;
+  left: 10%;
+  background-color: #ffffff;
+  width: 80%;
+  /* height: 60%; */
+  opacity: 1;
+  color: #969696;
+  border-radius: 20rpx;
+  z-index: 200;
 
 }
-.login1 .faimage11{
-	width: 100%;
-	height: 60rpx;
+
+.login1 .faimage11 {
+  width: 100%;
+  height: 60rpx;
 
 }
-.login1 .faimage11 .image11{
-	display: block;
-	width: 60rpx;
-	height: 60rpx;
-	
-	float: right;
-	margin: 5rpx 5rpx;
+
+.login1 .faimage11 .image11 {
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+
+  float: right;
+  margin: 5rpx 5rpx;
 }
-.login1  .image21{
-	display: block;
-	width: 200rpx;
-	height: 200rpx ;
-	margin: 10rpx auto ;
+
+.login1 .image21 {
+  display: block;
+  width: 200rpx;
+  height: 200rpx;
+  margin: 10rpx auto;
 }
-.login1 .lr11{
-	width: 60%;
-	margin: 0 auto;
-	padding: 10rpx 0;
-	text-align: center;
+
+.login1 .lr11 {
+  width: 60%;
+  margin: 0 auto;
+  padding: 10rpx 0;
+  text-align: center;
 }
-.login1 .button{
-	width: 30%;
-	text-align: center;
-	padding: 10rpx 5rpx;
-	background-color: #ec5d63;
-	color: #ffffff;
-	margin: 30rpx auto;
-	border-radius: 40rpx;
+
+.login1 .button {
+  width: 30%;
+  text-align: center;
+  padding: 10rpx 5rpx;
+  background-color: #ec5d63;
+  color: #ffffff;
+  margin: 30rpx auto;
+  border-radius: 40rpx;
 }
+
+
+/* .mask {
+
+  width: 100%;
+
+  height: 100%;
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  background: #000;
+
+  z-index: 9000;
+
+  opacity: 0.7;
+
+}
+
+.modalDlg {
+
+  width: 550rpx;
+
+  height: 520rpx;
+
+  position: fixed;
+
+  top: 25%;
+
+  z-index: 9999;
+
+  margin: 0rpx 100rpx 185rpx 100rpx;
+
+  background-color: #fff;
+
+  border-radius: 36rpx;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+}
+
+.img_wrap {
+
+  width: 130rpx;
+
+  height: 130rpx;
+
+  background: white;
+
+  border-radius: 50%;
+
+  border: 1px solid #0097ff;
+
+  margin: 0rpx auto;
+
+  position: absolute;
+
+  top: -65rpx;
+
+  margin-bottom: 30rpx;
+
+}
+
+.img_wrap image {
+
+  width: 100rpx;
+
+  height: 100rpx;
+
+  padding-top: 15rpx;
+
+  padding-left: 15rpx;
+
+  margin: 0rpx auto;
+
+}
+
+.useralert_huiyuan {
+
+  font-size: 13px;
+
+  margin-top: 100rpx;
+
+}
+
+.useralert_quanyi {
+
+  font-size: 13px;
+
+  color: darkgray;
+
+}
+
+.fenggexian {
+
+  width: 100%;
+
+  margin-top: 50rpx;
+
+  border-bottom: 1px solid #e8e8e8;
+
+}
+
+.vipinfo {
+
+  margin-top: 30rpx;
+
+  color: #6698ff;
+
+  font-size: 11px;
+
+}
+
+
+
+.shutalert {
+
+  width: 110rpx;
+
+  margin: 0rpx auto
+}
+
+.shutalert image {
+
+  width: 100rpx;
+
+  height: 100rpx;
+
+  position: absolute;
+
+  bottom: -120rpx;
+
+} */

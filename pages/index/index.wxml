@@ -4,82 +4,82 @@
 
 <view class="faIndex">
 
-	<!-- 导航栏 -->
-	<view class=".nav-bar" style="height:{{navBarHeight}}px;">
-		<view class="top" style="min-height:{{menuHeight}}px;position: fixed;top:{{menuTop}}px ;">
-			<view class="row1">
-				<view>
-					<image src="../image/dingwei1.png" />
-				</view>
+  <!-- 导航栏 -->
+  <view class=".nav-bar" style="height:{{navBarHeight}}px;">
+    <view class="top" style="min-height:{{menuHeight}}px;position: fixed;top:{{menuTop}}px ;">
+      <view class="row1">
+        <view>
+          <image src="../image/dingwei1.png" />
+        </view>
 
-				<view bindtap="">切换门店</view>
-			</view>
-			<view class="row2">{{shopName}}</view>
-		</view>
-	</view>
-	<view style="height:{{navBarHeight}}px;"></view>
-
-
-
-	<view class="index">
-		<view class="top1">
-			<view class="row1">
-				<image src="../image/saoyidao.png"></image>
-				<view>扫一扫</view>
-			</view>
-			<view class="row2">
-				<image src="../image/chongzhi.png"></image>
-				<view>会员充值</view>
-			</view>
-		</view>
-	</view>
+        <view bindtap="">切换门店</view>
+      </view>
+      <view class="row2">{{shopName}}</view>
+    </view>
+  </view>
+  <view style="height:{{navBarHeight}}px;"></view>
 
 
 
-	<view class="index1">
-		<view class="text">折扣牛超市购物流程</view>
-		<view class="text1">
-			<view class="text2"> 1 </view>
-			<view class="text3"> </view>
+  <view class="index">
+    <view class="top1">
+      <view class="row1">
+        <image src="../image/saoyidao.png"></image>
+        <view>扫一扫</view>
+      </view>
+      <view class="row2">
+        <image src="../image/chongzhi.png"></image>
+        <view>会员充值</view>
+      </view>
+    </view>
+  </view>
 
-			<view class="text2"> 2 </view>
-			<view class="text3"> </view>
 
-			<view class="text2"> 3 </view>
-			<view class="text3"> </view>
 
-			<view class="text2"> 4 </view>
-		</view>
-		<view class="step">
-			<view>扫码进店</view>
-			<view>选择商品</view>
-			<view>自助收银</view>
-			<view>开门离店</view>
-		</view>
+  <view class="index1">
+    <view class="text">折扣牛超市购物流程</view>
+    <view class="text1">
+      <view class="text2"> 1 </view>
+      <view class="text3"> </view>
 
-	</view>
+      <view class="text2"> 2 </view>
+      <view class="text3"> </view>
 
-	<!-- 公告 -->
-	<view class="notice">
-		<view class="left-box">
-			<view class="left-text">
-				<image src="../image/laba.png" style="width: 40rpx;height: 40rpx;"></image>
-			</view>
-			<view class='content-box'>
-				<view class='content-text' animation="{{animationData}}"><text id="text">{{text}}</text></view>
-			</view>
-			<!-- <view class="right-text"></view> -->
-		</view>
-	</view>
+      <view class="text2"> 3 </view>
+      <view class="text3"> </view>
 
-	<!-- 广告 -->
-	<view class="advertise">
-		<image src="../image/image1.png"></image>
-	</view>
+      <view class="text2"> 4 </view>
+    </view>
+    <view class="step">
+      <view>扫码进店</view>
+      <view>选择商品</view>
+      <view>自助收银</view>
+      <view>开门离店</view>
+    </view>
 
-	<view class='swiper-item'>{{text}}</view>
-	<view class='swiper-item'>{{text}}</view>
-	<view class='swiper-item'>{{text}}</view>
+  </view>
+
+  <!-- 公告 -->
+  <view class="notice">
+    <view class="left-box">
+      <view class="left-text">
+        <image src="../image/laba.png" style="width: 40rpx;height: 40rpx;"></image>
+      </view>
+      <view class='content-box'>
+        <view class='content-text' animation="{{animationData}}"><text id="text">{{text}}</text></view>
+      </view>
+      <!-- <view class="right-text"></view> -->
+    </view>
+  </view>
+
+  <!-- 广告 -->
+  <view class="advertise">
+    <image src="../image/image1.png"></image>
+  </view>
+
+  <view class='swiper-item'>{{text}}</view>
+  <view class='swiper-item'>{{text}}</view>
+  <view class='swiper-item'>{{text}}</view>
 
 </view>
 
@@ -101,67 +101,68 @@
 
 <!-- 扫码进店、呼叫客服页面 -->
 <block wx:if="{{loginOk && !enter}}">
-	<view class="falogin" catchtouchmove='false'></view>
-	<view class="faenter">
+  <view class="falogin" catchtouchmove='false'></view>
+  <view class="faenter">
 
-		<view class="enter">
-			<view class="view1">
-				<view style="margin-top: 40rpx;">
-					<image src="../image/hujiao1.png" style="margin: 0 auto; display: block;"></image>
-					<view style="text-align: center;">呼叫客服</view>
-				</view>
+    <view class="enter">
+      <view class="view1">
+        <view style="margin-top: 40rpx;">
+          <image src="../image/hujiao1.png" style="margin: 0 auto; display: block;"></image>
+          <view style="text-align: center;">呼叫客服</view>
+        </view>
 
-			</view>
-			<view class="view2">
-				<view style="margin-top: 40rpx;">
-					<image src="../image/kaimen.png" style="margin: 0 auto; display: block;"></image>
-					<view style="text-align: center;" bindtap="enterClick">扫码进店</view>
-				</view>
-			</view>
-		</view>
+      </view>
+      <view class="view2">
+        <view style="margin-top: 40rpx;">
+          <image src="../image/kaimen.png" style="margin: 0 auto; display: block;"></image>
+          <view style="text-align: center;" bindtap="enterClick">扫码进店</view>
+        </view>
+      </view>
+    </view>
 
-		<view class="faimage3">
-			<image src="../image/guanbi1.png" bindtap="cancleClick1"></image>
+    <view class="faimage3">
+      <image src="../image/guanbi1.png" bindtap="cancleClick1"></image>
 
-		</view>
+    </view>
 
-	</view>
+  </view>
 
 </block>
 
 <!-- 扫码出店、呼叫客服页面 -->
 <block wx:if="{{loginOk && enter}}">
-	<view class="falogin" catchtouchmove='false'></view>
-	<view class="faenter">
+  <view class="falogin" catchtouchmove='false'></view>
+  <view class="faenter">
 
-		<view class="enter">
-			<view class="view1">
-				<view style="margin-top: 40rpx;">
-					<image src="../image/hujiao1.png" style="margin: 0 auto; display: block;"></image>
-					<view style="text-align: center;">呼叫客服</view>
-				</view>
+    <view class="enter">
+      <view class="view1">
+        <view style="margin-top: 40rpx;">
+          <image src="../image/hujiao1.png" style="margin: 0 auto; display: block;"></image>
+          <view style="text-align: center;">呼叫客服</view>
+        </view>
 
-			</view>
-			<view class="view2">
-				<view style="margin-top: 40rpx;">
-					<image src="../image/kaimen.png" style="margin: 0 auto; display: block;"></image>
-					<view style="text-align: center;">扫码出店</view>
-				</view>
-			</view>
-		</view>
+      </view>
+      <view class="view2">
+        <view style="margin-top: 40rpx;">
+          <image src="../image/kaimen.png" style="margin: 0 auto; display: block;"></image>
+          <view style="text-align: center;">扫码出店</view>
+        </view>
+      </view>
+    </view>
 
-		<view class="faimage3">
-			<image src="../image/guanbi1.png" bindtap="cancleClick1"></image>
+    <view class="faimage3">
+      <image src="../image/guanbi1.png" bindtap="cancleClick1"></image>
 
-		</view>
+    </view>
 
-	</view>
+  </view>
 
 </block>
 
 <!-- 提示是否开启了无人售货模式的页面 -->
 <block wx:if="{{!hasUserInfo}}">
-	<view class="falogin1" catchtouchmove='false'></view>
+
+  <view class="falogin1" catchtouchmove='false'></view>
 	<view class="login1">
 		<view class="faimage11">
 			<image src="../image/guanbi.png" class="image11" bindtap="cancleClick"></image>
@@ -174,4 +175,32 @@
 		<view class="button">我知道啦</view>
 		
 	</view>
+
+
+  <!-- <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{true}}"></view>
+
+  <view class="modalDlg" wx:if="{{true}}">
+
+    <view class='img_wrap'>
+
+      <image src='http://pbqyqto63.bkt.clouddn.com/%E9%92%BB%E7%9F%B3.png'></image>
+
+    </view>
+
+    <view class='useralert_huiyuan'>{{uservip}}</view>
+
+    <view class='useralert_quanyi'>享受以下会员权益</view>
+
+    <view class='fenggexian'></view>
+
+    <view class='vipinfo'>{{vipinfo}}</view>
+
+    <view class='shutalert' bindtap="go">
+
+      <image src='http://pbqyqto63.bkt.clouddn.com/%E9%94%99%E5%8F%B7.png'></image>
+
+    </view>
+
+  </view> -->
+
 </block>
