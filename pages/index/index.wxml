@@ -7,12 +7,12 @@
   <!-- 导航栏 -->
   <view class=".nav-bar" style="height:{{navBarHeight}}px;">
     <view class="top" style="min-height:{{menuHeight}}px;position: fixed;top:{{menuTop}}px ;">
-      <view class="row1">
+      <view class="row1" bindtap="">
         <view>
           <image src="../image/dingwei1.png" />
         </view>
 
-        <view bindtap="">切换门店</view>
+        <view>切换门店</view>
       </view>
       <view class="row2">{{shopName}}</view>
     </view>
@@ -76,15 +76,11 @@
   <view class="advertise">
     <image src="../image/image1.png"></image>
   </view>
-
-  <view class='swiper-item'>{{text}}</view>
-  <view class='swiper-item'>{{text}}</view>
-  <view class='swiper-item'>{{text}}</view>
-
 </view>
 
 <!-- 进入页面的弹窗，登录页面 -->
-<!-- <block wx:if="{{!hasUserInfo}}">
+
+<block wx:if="{{!hasUserInfo}}">
 	<view class="falogin" catchtouchmove='false'></view>
 	<view class="login">
 		<view class="faimage1">
@@ -97,23 +93,24 @@
 		<view class="lr1"> 安全登录确认</view>
 		<button bindtap="getUserProfile" style="width: 80%;">登录</button>
 	</view>
-</block> -->
+</block>
 
 <!-- 扫码进店、呼叫客服页面 -->
-<block wx:if="{{loginOk && !enter}}">
+
+<block wx:if="{{loginOk && enter}}">
   <view class="falogin" catchtouchmove='false'></view>
   <view class="faenter">
 
     <view class="enter">
-      <view class="view1">
-        <view style="margin-top: 40rpx;" bindtap="cancleCall">
+      <view class="view1" bindtap="cancleCall">
+        <view style="margin-top: 40rpx;" >
           <image src="../image/hujiao1.png" style="margin: 0 auto; display: block;"></image>
           <view style="text-align: center;">呼叫客服</view>
         </view>
 
       </view>
-      <view class="view2">
-        <view style="margin-top: 40rpx;" bindtap="enterClick">
+      <view class="view2" bindtap="enterClick">
+        <view style="margin-top: 40rpx;" >
           <image src="../image/kaimen.png" style="margin: 0 auto; display: block;"></image>
           <view style="text-align: center;">扫码进店</view>
         </view>
@@ -132,7 +129,8 @@
 </block>
 
 <!-- 扫码出店、呼叫客服页面 -->
-<block wx:if="{{loginOk && enter}}">
+
+<!-- <block wx:if="{{!hasUserInfo}}">
   <view class="falogin" catchtouchmove='false'></view>
   <view class="faenter">
 
@@ -159,10 +157,11 @@
 
   </view>
 
-</block>
+</block> -->
 
 <!-- 提示是否开启了无人售货模式的页面 -->
-<block wx:if="{{!hasUserInfo}}">
+
+<!-- <block wx:if="{{!hasUserInfo}}">
 
   <view class="falogin1" catchtouchmove='false'></view>
   <view class="login1">
@@ -178,31 +177,4 @@
 
   </view>
 
-
-  <!-- <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{true}}"></view>
-
-  <view class="modalDlg" wx:if="{{true}}">
-
-    <view class='img_wrap'>
-
-      <image src='http://pbqyqto63.bkt.clouddn.com/%E9%92%BB%E7%9F%B3.png'></image>
-
-    </view>
-
-    <view class='useralert_huiyuan'>{{uservip}}</view>
-
-    <view class='useralert_quanyi'>享受以下会员权益</view>
-
-    <view class='fenggexian'></view>
-
-    <view class='vipinfo'>{{vipinfo}}</view>
-
-    <view class='shutalert' bindtap="go">
-
-      <image src='http://pbqyqto63.bkt.clouddn.com/%E9%94%99%E5%8F%B7.png'></image>
-
-    </view>
-
-  </view> -->
-
-</block>
+</block> -->

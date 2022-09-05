@@ -2,8 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/cart/cart",
-    "pages/my/my"
-
+    "pages/my/my",
+    "pages/details/details"
   ],
   "tabBar": {
     "color": "black",
