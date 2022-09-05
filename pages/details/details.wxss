@@ -7,7 +7,7 @@ page{
 .details .topde{
 	display: flex;
 	/* background-color: #ec5d63; */
-	width: 310rpx;
+	width: 280rpx;
 	margin: 0 auto;
 	text-align: center;
 
@@ -37,6 +37,7 @@ page{
 	margin: 0 10rpx;
 	border-radius: 20rpx;
 	height: 240rpx;
+	box-shadow:5px 5px 5px gainsboro;
 }
 .details .row1 .choose1 {
 	color: #bebebe;

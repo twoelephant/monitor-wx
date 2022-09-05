@@ -33,7 +33,7 @@ Page({
     let month = today.getMonth()
     let date = today.getDate()
     this.setData({
-      timeNow: year + "-" + "0" + (month + 1) + "-" + "0" + (date),
+      timeNow: year + "-" + "0" + (month + 1),
     })
 
 
