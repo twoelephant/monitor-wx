@@ -3,27 +3,30 @@
 </page-meta>
 <view class="bigwai">
   <view class="goods" wx:for="{{goods}}" wx:key="index">
-    <!-- <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" data-id="{{item.id}}"> -->
-      <view class="goodsmessage">
-        <view class="goodsimg" >
-          <image src="{{item.src}}" />
-        </view>
+    <mp-slideview buttons="{{slideButtons}}" icon='{{true}}' bindbuttontap="slideButtonTap" data-id="{{item.id}}">
+      <view class="delete">
+        <view class="goodsmessage">
+          <view class="goodsimg">
+            <image src="{{item.src}}" />
+          </view>
 
-        <view class="goodsname">
-          <text class="name"> {{item.name}}</text>
-          <view class="themessage">商品信息</view>
-          <view class="goodsprice">
-            <text class="money"> ￥<text>{{item.price}}</text></text>
-            <view class="changenum">
-              <image wx:if="{{item.num != 1}}" data-id="{{item.id}}" bindtap="down" src="../image/jian1.png" />
-              <image wx:if="{{item.num == 1}}" src="../image/jian2.png" />
-              <view class="num">{{item.num}}</view>
-              <image data-id="{{item.id}}" bindtap="up" src="../image/jia.png" />
+          <view class="goodsname">
+            <text class="name"> {{item.name}}</text>
+            <view class="themessage">商品信息</view>
+            <view class="goodsprice">
+              <text class="money"> ￥<text>{{item.price}}</text></text>
+              <view class="changenum">
+                <image wx:if="{{item.num != 1}}" data-id="{{item.id}}" bindtap="down" src="../image/jian1.png" />
+                <image wx:if="{{item.num == 1}}" src="../image/jian2.png" />
+                <view class="num">{{item.num}}</view>
+                <image data-id="{{item.id}}" bindtap="up" src="../image/jia.png" />
+              </view>
             </view>
           </view>
         </view>
       </view>
-    <!-- </mp-slideview> -->
+
+    </mp-slideview>
   </view>
 </view>
 

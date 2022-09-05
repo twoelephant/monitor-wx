@@ -23,7 +23,7 @@
 
   <view class="index">
     <view class="top1">
-      <view class="row1">
+      <view class="row1" bindtap="cancleCsao">
         <image src="../image/saoyidao.png"></image>
         <view>扫一扫</view>
       </view>
@@ -106,23 +106,25 @@
 
     <view class="enter">
       <view class="view1">
-        <view style="margin-top: 40rpx;">
+        <view style="margin-top: 40rpx;" bindtap="cancleCall">
           <image src="../image/hujiao1.png" style="margin: 0 auto; display: block;"></image>
           <view style="text-align: center;">呼叫客服</view>
         </view>
 
       </view>
       <view class="view2">
-        <view style="margin-top: 40rpx;">
+        <view style="margin-top: 40rpx;" bindtap="enterClick">
           <image src="../image/kaimen.png" style="margin: 0 auto; display: block;"></image>
-          <view style="text-align: center;" bindtap="enterClick">扫码进店</view>
+          <view style="text-align: center;">扫码进店</view>
         </view>
       </view>
     </view>
 
     <view class="faimage3">
       <image src="../image/guanbi1.png" bindtap="cancleClick1"></image>
-
+    </view>
+    <view class="guaduan" style="{{displaygua}}" bindtap="cancleCgd">
+      <image src="../image/guaduan.png"></image>
     </view>
 
   </view>
@@ -163,18 +165,18 @@
 <block wx:if="{{!hasUserInfo}}">
 
   <view class="falogin1" catchtouchmove='false'></view>
-	<view class="login1">
-		<view class="faimage11">
-			<image src="../image/guanbi.png" class="image11" bindtap="cancleClick"></image>
-		</view>
+  <view class="login1">
+    <view class="faimage11">
+      <image src="../image/guanbi.png" class="image11" bindtap="cancleClick"></image>
+    </view>
 
-		<image src="../image/kaimen2.png" class="image21"></image>
+    <image src="../image/kaimen2.png" class="image21"></image>
 
-		<view class="lr11"> 当前门店未开启无人零售</view>
-		<view class="lr11"> 暂时无法扫码开门</view>
-		<view class="button">我知道啦</view>
-		
-	</view>
+    <view class="lr11"> 当前门店未开启无人零售</view>
+    <view class="lr11"> 暂时无法扫码开门</view>
+    <view class="button">我知道啦</view>
+
+  </view>
 
 
   <!-- <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{true}}"></view>

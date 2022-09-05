@@ -64,10 +64,12 @@ Page({
     buylist:[],
     total:0,
     slideButtons:[  {
-              text: '删除',
-              type: 'warn',
-              extClass: 'text'
-            }]
+      text:'删除',
+      type:'warn',
+      extClass:'deleteicon',
+      src:'/pages/image/del.png'
+     
+  }]
   },
 
   /**
