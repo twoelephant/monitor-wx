@@ -343,6 +343,13 @@
 
 }
 
+.faenter .guaduan image {
+  width: 150rpx;
+  height: 150rpx;
+  display: block;
+  margin: 50rpx auto;
+}
+
 
 /*提示现在不是无人售货模式页面的样式 */
 .falogin1 {
