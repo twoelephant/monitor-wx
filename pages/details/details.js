@@ -1,27 +1,25 @@
-// pages/my/my.js
+// pages/details/details.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      nbFrontColor: '#000000',
-      nbBackgroundColor: '#ffffff',
-      imglist:[
-        {src:'../image/youhuiquan.png',text:'领券中心'},
-        {src:'../image/quanyi.png',text:'权益卡'},
-        {src:'../image/zidongchongzhi.png',text:'自动充值'},
-        {src:'../image/wuren.png',text:'无人自助'},
-        {src:'../image/dizhi.png',text:'收货地址'},
-        {src:'../image/fenxiao.png',text:'分销员'},
-        {src:'../image/xianxia.png',text:'线下密码'},
-        {src:'../image/fujin.png',text:'附近门店'}
-      ]
-  
+    nbFrontColor: '#000000',
+    nbBackgroundColor: '#ffffff',
+    timeNow: '2020-01-01',
+    timePast: '',
+    // year: '',
+    // month: '',
+
+
   },
-  handelclick(){
-    wx.navigateTo({
-      url: '../details/details',
+  bindDateChange(e) {
+    /* 改变日期 */
+    // console.log(e)
+    this.setData({
+      timeNow: e.detail.value,
+
     })
   },
 
@@ -29,11 +27,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    var today = new Date()
+    // console.log(today)
+    let year = today.getFullYear()
+    let month = today.getMonth()
+    let date = today.getDate()
     this.setData({
-      nbTitle: '我的',  
-     
+      timeNow: year + "-" + "0" + (month + 1) + "-" + "0" + (date),
     })
+
+
   },
 
   /**

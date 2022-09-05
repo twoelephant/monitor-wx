@@ -6,7 +6,7 @@ App({
     menuTop: 0, // 胶囊距顶部间距   ,用了
     menuHeight: 0, // 胶囊高度（自定义内容可与胶囊高度保证一致） ,用了
     userInfo: null, //通过微信获取到的用户头像和用户名等信息
-    code: null, //通过wx.login获得的临时登录凭证，用来传给后台获取用户手机号
+    code: '', //通过wx.login获得的临时登录凭证，用来传给后台获取用户手机号
   },
   onLaunch() {
 

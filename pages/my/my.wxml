@@ -21,7 +21,7 @@
 </view>
 <view class="buyding">
     <text>我的订单</text>
-    <text class="buylink">查看全部订单 ></text>
+    <text class="buylink" bindtap="handelclick">查看全部订单 ></text>
   </view>
 <view class='userbuy'>
   <view>

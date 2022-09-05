@@ -27,16 +27,13 @@ Page({
     nickName: '',
     hasUserInfo: false,//是否获取到用户信息，默认为false
     loginOk: false,    //后台登录状态，默认为false
+    enter:false,
 
-    // hasUserInfo: true, //是否获取到用户信息，默认为false
-    // loginOk: true, //后台登录状态，默认为false，登录ok后要显示  扫码进店页面
-    // enter: false, //进门状态，false为未进入，true已经进入
-    // goout: false, //是否出门
 
     displaygua: 'display: none',    //挂断button状态
     expireAt: '',
     roomName: '001',
-    userId: '001',
+    userId: '002',
     roomToken: '',
   },
 
@@ -49,13 +46,6 @@ Page({
   cancleClick1() {
     this.setData({
       loginOk: false,
-      enter: false,
-    })
-  },
-
-  enterClick() {
-    this.setData({
-      enter: true
     })
   },
   cancleCsao() {           //扫一扫
@@ -66,7 +56,7 @@ Page({
     let e = d.substring(0, 10)
     this.setData({
       loginOk: true,
-      enter: false,
+      enter: true,
       expireAt: e,
     })
     const _this = this
@@ -96,6 +86,10 @@ Page({
       displaygua: 'display: '
     })
   },
+  enterClick() { //开门进店
+    console.log("开门进店")
+
+  },
   cancleCgd() {             //挂断
     client.leave()
     this.setData({
@@ -113,16 +107,9 @@ Page({
           loginOk: true
         }),
           app.globalData.userInfo = res.userInfo
-
-        // console.log(app.globalData.userInfo)
       }
     })
-
-
   },
-
-
-
 
   onLoad() {
     const _this = this
@@ -131,23 +118,11 @@ Page({
       menuTop: app.globalData.menuTop,
       navBarHeight: app.globalData.navBarHeight
     })
-
-    // wx.getUserInfo({ 
-    // 	不能用了
-    // 	// lang: lang,
-    // 	// withCredentials: true,
-    // 	success: (result) => {
-    // 		console.log(result)
-    // 		_this.setData({
-    // 			avatar:result.userInfo.avatarUrl
-    // 		})
-    // 	},
-    //   })
   },
 
 
   onShow() {
-    // this.initAnimation(this.data.text); //关掉广播
+    // this.initAnimation(this.data.text); //关掉广播，取消注释可播放广播
   },
   onHide() {
     //关掉广播
@@ -213,7 +188,4 @@ Page({
       timer
     })
   },
-
-
-
 })
