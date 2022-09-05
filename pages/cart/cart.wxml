@@ -1,8 +1,11 @@
+<!-- 更改标题 -->
 <page-meta>
   <navigation-bar title="购物车" />
 </page-meta>
+<!-- 从后端获取的商品数据 -->
 <view class="bigwai">
   <view class="goods" wx:for="{{goods}}" wx:key="index">
+  <!-- 滑动组件 -->
     <mp-slideview buttons="{{slideButtons}}" icon='{{true}}' bindbuttontap="slideButtonTap" data-id="{{item.id}}">
       <view class="delete">
         <view class="goodsmessage">
@@ -29,7 +32,7 @@
     </mp-slideview>
   </view>
 </view>
-
+<!-- 结算栏 -->
 <view class="balance"><text>总计：￥{{total}}</text>
   <view bindtap="jiesuan">结算</view>
 </view>

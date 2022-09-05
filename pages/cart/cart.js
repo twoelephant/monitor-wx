@@ -1,4 +1,5 @@
 // pages/cart/cart.js
+// 扫一扫后商品存放全局，从全局获取数据
 const app = getApp()
 Page({
   /**
