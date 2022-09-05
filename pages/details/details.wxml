@@ -45,6 +45,50 @@
 		</view>
 	</view>
 
+  <view class="row1" style="background-color: #ffffff;margin-bottom: 5rpx;">
+		<view style="padding: 20rpx; ">
+			<view style="font-size: 30rpx;border-bottom: solid 1rpx #f2f2f2; padding-bottom: 15rpx;">
+				<text class="choose">店铺名称：</text>
+				<text>江场三路店</text>
+			</view>
+			<view style="font-size: 28rpx; margin-top: 15rpx;">
+				<text class="choose1">订单号：</text>
+				<text>1234567890</text>
+			</view>
+			<view style="font-size: 28rpx;">
+				<text class="choose1">订单金额：</text>
+				<text>￥6</text>
+			</view>
+
+			<view style="font-size: 28rpx;">
+				<text class="choose1">付款日期：</text>
+				<text>2022-09-05</text>
+			</view>
+		</view>
+	</view>
+
+  <view class="row1" style="background-color: #ffffff;margin-bottom: 5rpx;">
+		<view style="padding: 20rpx; ">
+			<view style="font-size: 30rpx;border-bottom: solid 1rpx #f2f2f2; padding-bottom: 15rpx;">
+				<text class="choose">店铺名称：</text>
+				<text>江场三路店</text>
+			</view>
+			<view style="font-size: 28rpx; margin-top: 15rpx;">
+				<text class="choose1">订单号：</text>
+				<text>1234567890</text>
+			</view>
+			<view style="font-size: 28rpx;">
+				<text class="choose1">订单金额：</text>
+				<text>￥6</text>
+			</view>
+
+			<view style="font-size: 28rpx;">
+				<text class="choose1">付款日期：</text>
+				<text>2022-09-05</text>
+			</view>
+		</view>
+	</view>
+
 	
 
 
