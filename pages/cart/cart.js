@@ -1,65 +1,62 @@
 // pages/cart/cart.js
 const app = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    nbFrontColor: '#000000',
-    nbBackgroundColor: '#ffffff',
     goods: [{
         id: '1',
-        src: '../image/shanpin.png',
-        name: '包',
+        src: '../image/shangpin.png',
+        name: '薯片',
         price: '13.5',
         num: '1',
       },
       {
         id: '2',
-        src: '../image/shanpin.png',
-        name: '包',
+        src: '../image/shangpin.png',
+        name: '薯片',
         price: '12.65',
         num: '1',
       },
       {
         id: '3',
-        src: '../image/shanpin.png',
-        name: '包',
+        src: '../image/shangpin.png',
+        name: '薯片',
         price: '10.8',
         num: '1',
       },
       {
         id: '4',
-        src: '../image/shanpin.png',
-        name: '包',
+        src: '../image/shangpin.png',
+        name: '薯片',
         price: '12',
         num: '1',
       },
       {
         id: '5',
-        src: '../image/shanpin.png',
-        name: '包',
+        src: '../image/shangpin.png',
+        name: '薯片',
         price: '16',
         num: '1',
       },
       {
         id: '6',
-        src: '../image/shanpin.png',
-        name: '包',
+        src: '../image/shangpin.png',
+        name: '薯片',
         price: '14',
         num: '2',
       },
       {
         id: '7',
-        src: '../image/shanpin.png',
-        name: '包',
+        src: '../image/shangpin.png',
+        name: '薯片',
         price: '14',
         num: '2',
       }, {
         id: '8',
-        src: '../image/shanpin.png',
-        name: '包',
+        src: '../image/shangpin.png',
+        name: '薯片',
         price: '14',
         num: '2',
       },
