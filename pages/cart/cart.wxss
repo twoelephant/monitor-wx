@@ -1,62 +1,101 @@
 /* pages/cart/cart.wxss */
-.bigwai{
+.bigwai {
   height: 92vh;
   overflow: auto;
+  background-color: #ececec;
 }
-.goods{
+
+.goods {
   display: flex;
-  height: 18vh;
-  border-bottom: 1px solid #666666;
+  height: 32vw;
+  width: 100%;
   font-size: 4vw;
   z-index: 1;
   box-sizing: border-box;
-}
-.goodsmessage{
-  flex:1;
-  display: flex;
-  margin-left: 2vw;
-  width: 98vw;
-  height: 18vh;
-}
-.goodsmessage .goodsimg{
-  width: 20vw;
-  height: 20vw;
-  margin: auto 0;
-}
-.goodsname{
-  margin: auto 0;
-  margin-left: 2vw;
-  flex:1;
+  margin: 2vw auto 0;
 }
 
-.goodsname .goodsprice{
+.delete{
+  width: 100vw;
+  height: 100%;
+}
+.goodsmessage {
+  background-color: #fff;
+  flex: 1;
+  display: flex;
+  height: 98%;
+  width: 96%;
+  border-radius: 10px;
+  padding: 3vw 0;
+  margin: auto auto;
+}
+
+.goodsmessage .goodsimg {
+  width: 25vw;
+  height: 25vw;
+  margin: auto 0;
+  margin-left: 3vw;
+}
+.goodsimg image{
+  width: 95%;
+  height: 95%;
+  border-radius: 10px;
+}
+.goodsname {
+  height: 25vw;
+  margin: auto 0;
+  margin-left: 2vw;
+  flex: 1;
+}
+.goodsname .name{
+  font-size: 5vw;
+  font-weight: bold;
+}
+.goodsname .themessage{
+  height: 8vw;
+  width: 60vw;
+  overflow: hidden;
+  text-overflow:ellipsis;
+ font-size: 4vw;
+ margin-right: 4vw;
+}
+.goodsname .goodsprice {
+  width: 65vw;
   display: flex;
 }
-.money{
+
+.money {
   flex: 1;
-  font-size: 5vw;
+  font-size: 4vw;
   color: #f21a0c;
 }
-.changenum{
+.money text{
+  font-size: 5vw;
+  font-weight: bold;
+}
+.changenum {
   width: 20vw;
   display: flex;
+  margin-right: 4vw;
 }
-.changenum text{
-  font-size: 5vw;
-  height: 6vw;
-  line-height: 6vw;
+.changenum image {
+  width: 4vw;
+  height: 4vw;
+  margin: auto 0;
+  padding: 0 1vw;
 }
-.num{
+
+.num {
   width: 10vw;
   height: 6vw;
+  line-height: 6vw;
   background-color: #f2f2f2;
-  margin:0 1vw;
   text-align: center;
 }
 
-.balance{
+.balance {
   position: absolute;
-  bottom:0;
+  bottom: 0;
   z-index: 2;
   background-color: #fff;
   height: 5vh;
@@ -65,7 +104,8 @@
   display: flex;
   font-size: 4vw;
 }
-.balance view{
+
+.balance view {
   background-color: #f21a0c;
   width: 15vw;
   height: 5vh;

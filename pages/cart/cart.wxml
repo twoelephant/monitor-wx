@@ -1,25 +1,31 @@
 <page-meta>
-  <navigation-bar title="购物车" front-color="{{nbFrontColor}}" background-color="{{nbBackgroundColor}}" color-animation-duration="2000" color-animation-timing-func="easeIn" />
+  <navigation-bar title="购物车" />
 </page-meta>
 <view class="bigwai">
   <view class="goods" wx:for="{{goods}}" wx:key="index">
-    <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" data-id="{{item.id}}">
-      <view class="goodsmessage">
-        <image class="goodsimg" src="{{item.src}}" />
-        <view class="goodsname">
-          <text> {{item.name}}</text>
-          <view>商品信息</view>
-          <view class="goodsprice">
-            <text class="money"> ￥{{item.price}}</text>
-            <view class="changenum">
-              <text wx:if="{{item.num != 1}}" style="color: black;" data-id="{{item.id}}" bindtap="down">-</text>
-              <text wx:if="{{item.num == 1}}" style="color: #f3f3f3;">-</text>
-              <view class="num">{{item.num}}</view>
-              <text data-id="{{item.id}}" bindtap="up">+</text>
+    <mp-slideview buttons="{{slideButtons}}" icon='{{true}}' bindbuttontap="slideButtonTap" data-id="{{item.id}}">
+      <view class="delete">
+        <view class="goodsmessage">
+          <view class="goodsimg">
+            <image src="{{item.src}}" />
+          </view>
+
+          <view class="goodsname">
+            <text class="name"> {{item.name}}</text>
+            <view class="themessage">商品信息</view>
+            <view class="goodsprice">
+              <text class="money"> ￥<text>{{item.price}}</text></text>
+              <view class="changenum">
+                <image wx:if="{{item.num != 1}}" data-id="{{item.id}}" bindtap="down" src="../image/jian1.png" />
+                <image wx:if="{{item.num == 1}}" src="../image/jian2.png" />
+                <view class="num">{{item.num}}</view>
+                <image data-id="{{item.id}}" bindtap="up" src="../image/jia.png" />
+              </view>
             </view>
           </view>
         </view>
       </view>
+
     </mp-slideview>
   </view>
 </view>
