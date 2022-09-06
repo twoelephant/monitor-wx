@@ -7,70 +7,70 @@ Page({
    */
   data: {
     goods: [{
-        id: '1',
-        src: '/image/shangpin.png',
-        name: '薯片',
-        price: '13.5',
-        num: '1',
-      },
-      {
-        id: '2',
-        src: '/image/shangpin.png',
-        name: '薯片',
-        price: '12.65',
-        num: '1',
-      },
-      {
-        id: '3',
-        src: '/image/shangpin.png',
-        name: '薯片',
-        price: '10.8',
-        num: '1',
-      },
-      {
-        id: '4',
-        src: '/image/shangpin.png',
-        name: '薯片',
-        price: '12',
-        num: '1',
-      },
-      {
-        id: '5',
-        src: '/image/shangpin.png',
-        name: '薯片',
-        price: '16',
-        num: '1',
-      },
-      {
-        id: '6',
-        src: '/image/shangpin.png',
-        name: '薯片',
-        price: '14',
-        num: '2',
-      },
-      {
-        id: '7',
-        src: '/image/shangpin.png',
-        name: '薯片',
-        price: '14',
-        num: '2',
-      }, {
-        id: '8',
-        src: '/image/shangpin.png',
-        name: '薯片',
-        price: '14',
-        num: '2',
-      },
+      id: '1',
+      src: '../image/shangpin.png',
+      name: '薯片',
+      price: '13.5',
+      num: '1',
+    },
+    {
+      id: '2',
+      src: '../image/shangpin.png',
+      name: '薯片',
+      price: '12.65',
+      num: '1',
+    },
+    {
+      id: '3',
+      src: '../image/shangpin.png',
+      name: '薯片',
+      price: '10.8',
+      num: '1',
+    },
+    {
+      id: '4',
+      src: '../image/shangpin.png',
+      name: '薯片',
+      price: '12',
+      num: '1',
+    },
+    {
+      id: '5',
+      src: '../image/shangpin.png',
+      name: '薯片',
+      price: '16',
+      num: '1',
+    },
+    {
+      id: '6',
+      src: '../image/shangpin.png',
+      name: '薯片',
+      price: '14',
+      num: '2',
+    },
+    {
+      id: '7',
+      src: '../image/shangpin.png',
+      name: '薯片',
+      price: '14',
+      num: '2',
+    }, {
+      id: '8',
+      src: '../image/shangpin.png',
+      name: '薯片',
+      price: '14',
+      num: '2',
+    },
     ],
-    buylist:[],
-    total:0,
-    slideButtons:[  {
-      text:'删除',
-      type:'warn',
-      extClass:'deleteicon',
-      src:'/image/del.png'
-     
-  }]
+    buylist: [],
+    total: 0,
+    slideButtons: [{
+      text: '删除',
+      type: 'warn',
+      extClass: 'deleteicon',
+      src: '/image/del.png'
+
+    }]
   },
 
   /**
@@ -93,67 +93,67 @@ Page({
   /**
    * 总金额
    */
-  zong(){
-    let newtotal=0;
-    this.data.goods.map((item)=>{
-      let a=parseFloat(item.price)*parseInt(item.num)
+  zong() {
+    let newtotal = 0;
+    this.data.goods.map((item) => {
+      let a = parseFloat(item.price) * parseInt(item.num)
       newtotal += a
     })
     this.setData(
-     { total:newtotal}
+      { total: newtotal }
     )
   },
   /**
    * 商品数量,添加或减少
    */
-  up(e){
-    let nowid= e.currentTarget.dataset.id
-    for (let i = 0; i <this.data.goods.length; i++) {
+  up(e) {
+    let nowid = e.currentTarget.dataset.id
+    for (let i = 0; i < this.data.goods.length; i++) {
       if (this.data.goods[i].id === nowid) {
-          let ab='goods['+i+'].num'
-          let s = parseInt(this.data.goods[i].num)
-          ++s
-          this.setData({
-            [ab]:s
-          })
-          this.zong()
+        let ab = 'goods[' + i + '].num'
+        let s = parseInt(this.data.goods[i].num)
+        ++s
+        this.setData({
+          [ab]: s
+        })
+        this.zong()
       }
     }
   },
-  down(e){
-    let nowid= e.currentTarget.dataset.id
-    for (let i = 0; i <this.data.goods.length; i++) {
+  down(e) {
+    let nowid = e.currentTarget.dataset.id
+    for (let i = 0; i < this.data.goods.length; i++) {
       if (this.data.goods[i].id === nowid) {
-          let ab='goods['+i+'].num'
-          let s = parseInt(this.data.goods[i].num)
-           --s
-          this.setData({
-            [ab]:s
-          })
-          this.zong()
+        let ab = 'goods[' + i + '].num'
+        let s = parseInt(this.data.goods[i].num)
+        --s
+        this.setData({
+          [ab]: s
+        })
+        this.zong()
       }
     }
   },
   /**
    * 删除商品
    */
-  slideButtonTap(e){
-    let nowid= e.currentTarget.dataset.id
-    for (let i = 0; i <this.data.goods.length; i++) {
+  slideButtonTap(e) {
+    let nowid = e.currentTarget.dataset.id
+    for (let i = 0; i < this.data.goods.length; i++) {
       if (this.data.goods[i].id === nowid) {
-          let newgoods=this.data.goods
-          newgoods.splice(i,1)
-          this.setData({
-            goods:newgoods
-          })
-          this.zong()
+        let newgoods = this.data.goods
+        newgoods.splice(i, 1)
+        this.setData({
+          goods: newgoods
+        })
+        this.zong()
       }
     }
   },
-   /**
-   * 结算
-   */
-  jiesuan(){
+  /**
+  * 结算
+  */
+  jiesuan() {
 
   },
   /**
