@@ -7,7 +7,7 @@
       <view class="nickname"> 小程序用户</view>
       <view class="viplv">普通会员</view>
     </view>
-    <image class="myerwei" src="../image/erweima.png" />
+    <image class="myerwei" src="/image/erweima.png" />
   </view>
   <view class="useruse">
     <view>0<view>可用积分</view>
@@ -25,23 +25,23 @@
   </view>
 <view class='userbuy'>
   <view>
-    <image class="pictuer" src='../image/fukuan.png' />
+    <image class="pictuer" src='/image/fukuan.png' />
     请付款
   </view>
   <view>
-    <image class="pictuer" src='../image/baojiadan.png' />
+    <image class="pictuer" src='/image/baojiadan.png' />
     预售
   </view>
   <view>
-    <image class="pictuer" src='../image/shouhuo.png' />
+    <image class="pictuer" src='/image/shouhuo.png' />
     待收货
   </view>
   <view>
-    <image class="pictuer" src='../image/ziti.png' />
+    <image class="pictuer" src='/image/ziti.png' />
     待自提
   </view>
   <view>
-    <image class="pictuer" src='../image/diannao.png' />
+    <image class="pictuer" src='/image/diannao.png' />
     售后
   </view>
 </view>

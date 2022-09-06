@@ -11,11 +11,11 @@
 		<picker  mode="date" value="{{timeNow}}" fields="month" start="2000-09-01" end="2099-09-01" bindchange="bindDateChange">
 			<view class="topde">
 			
-				<image class="image" src="../image/rili.png"></image>
+				<image class="image" src="/image/rili.png"></image>
 				<view class="picker">
 					<text>{{timeNow}}</text>
 				</view>
-				<image class="image1" src="../image/xiala.png"></image>
+				<image class="image1" src="/image/xiala.png"></image>
 			</view>
 		</picker>
 

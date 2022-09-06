@@ -19,10 +19,10 @@
             <view class="goodsprice">
               <text class="money"> ￥<text>{{item.price}}</text></text>
               <view class="changenum">
-                <image wx:if="{{item.num != 1}}" data-id="{{item.id}}" bindtap="down" src="../image/jian1.png" />
-                <image wx:if="{{item.num == 1}}" src="../image/jian2.png" />
+                <image wx:if="{{item.num != 1}}" data-id="{{item.id}}" bindtap="down" src="/image/jian1.png" />
+                <image wx:if="{{item.num == 1}}" src="/image/jian2.png" />
                 <view class="num">{{item.num}}</view>
-                <image data-id="{{item.id}}" bindtap="up" src="../image/jia.png" />
+                <image data-id="{{item.id}}" bindtap="up" src="/image/jia.png" />
               </view>
             </view>
           </view>

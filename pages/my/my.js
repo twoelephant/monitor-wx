@@ -8,14 +8,14 @@ Page({
       nbFrontColor: '#000000',
       nbBackgroundColor: '#ffffff',
       imglist:[
-        {src:'../image/youhuiquan.png',text:'领券中心'},
-        {src:'../image/quanyi.png',text:'权益卡'},
-        {src:'../image/zidongchongzhi.png',text:'自动充值'},
-        {src:'../image/wuren.png',text:'无人自助'},
-        {src:'../image/dizhi.png',text:'收货地址'},
-        {src:'../image/fenxiao.png',text:'分销员'},
-        {src:'../image/xianxia.png',text:'线下密码'},
-        {src:'../image/fujin.png',text:'附近门店'}
+        {src:'/image/youhuiquan.png',text:'领券中心'},
+        {src:'/image/quanyi.png',text:'权益卡'},
+        {src:'/image/zidongchongzhi.png',text:'自动充值'},
+        {src:'/image/wuren.png',text:'无人自助'},
+        {src:'/image/dizhi.png',text:'收货地址'},
+        {src:'/image/fenxiao.png',text:'分销员'},
+        {src:'/image/xianxia.png',text:'线下密码'},
+        {src:'/image/fujin.png',text:'附近门店'}
       ]
   
   },
