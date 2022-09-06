@@ -7,16 +7,10 @@ Page({
   data: {
     nbFrontColor: '#000000',
     nbBackgroundColor: '#ffffff',
-    timeNow: '2020-01-01',
-    timePast: '',
-    // year: '',
-    // month: '',
-
-
+    timeNow: '',
   },
   bindDateChange(e) {
     /* 改变日期 */
-    // console.log(e)
     this.setData({
       timeNow: e.detail.value,
 
@@ -28,7 +22,6 @@ Page({
    */
   onLoad(options) {
     var today = new Date()
-    // console.log(today)
     let year = today.getFullYear()
     let month = today.getMonth()
     let date = today.getDate()

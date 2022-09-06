@@ -1,12 +1,11 @@
 // pages/my/my.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      nbFrontColor: '#000000',
-      nbBackgroundColor: '#ffffff',
       imglist:[
         {src:'/image/youhuiquan.png',text:'领券中心'},
         {src:'/image/quanyi.png',text:'权益卡'},
@@ -16,7 +15,8 @@ Page({
         {src:'/image/fenxiao.png',text:'分销员'},
         {src:'/image/xianxia.png',text:'线下密码'},
         {src:'/image/fujin.png',text:'附近门店'}
-      ]
+      ],
+      userInfo:null,
   
   },
   handelclick(){
@@ -29,10 +29,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
     this.setData({
       nbTitle: '我的',  
-     
+      userInfo:app.globalData.userInfo
     })
   },
 

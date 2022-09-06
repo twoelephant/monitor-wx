@@ -1,4 +1,4 @@
-// pages/cart/cart.js
+/* pages/cart/cart.js */
 // 扫一扫后商品存放全局，从全局获取数据
 const app = getApp()
 Page({
@@ -6,62 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    goods: [{
-      id: '1',
-      src: '../image/shangpin.png',
-      name: '薯片',
-      price: '13.5',
-      num: '1',
-    },
-    {
-      id: '2',
-      src: '../image/shangpin.png',
-      name: '薯片',
-      price: '12.65',
-      num: '1',
-    },
-    {
-      id: '3',
-      src: '../image/shangpin.png',
-      name: '薯片',
-      price: '10.8',
-      num: '1',
-    },
-    {
-      id: '4',
-      src: '../image/shangpin.png',
-      name: '薯片',
-      price: '12',
-      num: '1',
-    },
-    {
-      id: '5',
-      src: '../image/shangpin.png',
-      name: '薯片',
-      price: '16',
-      num: '1',
-    },
-    {
-      id: '6',
-      src: '../image/shangpin.png',
-      name: '薯片',
-      price: '14',
-      num: '2',
-    },
-    {
-      id: '7',
-      src: '../image/shangpin.png',
-      name: '薯片',
-      price: '14',
-      num: '2',
-    }, {
-      id: '8',
-      src: '../image/shangpin.png',
-      name: '薯片',
-      price: '14',
-      num: '2',
-    },
-    ],
+    goods: [],
     buylist: [],
     total: 0,
     slideButtons: [{
@@ -69,7 +14,6 @@ Page({
       type: 'warn',
       extClass: 'deleteicon',
       src: '/image/del.png'
-
     }]
   },
 
@@ -77,11 +21,13 @@ Page({
    * 生命周期函数--监听页面加载,在页面加载时要获取扫面商品信息
    */
   onLoad(options) {
-    this.zong()
-    wx.setTabBarBadge({ /* 获取购物车数量显示在购物车右上角 */
-      index: 1,
-      text: String(this.data.goods.length),
+   
+    //获取购物车信息
+    this.setData({
+      goods:app.globalData.goods
     })
+    this.zong()
+   
   },
 
   /**
@@ -146,10 +92,18 @@ Page({
         this.setData({
           goods: newgoods
         })
+        app.globalData.goods=newgoods
+        wx.setTabBarBadge({ /* 获取购物车数量显示在购物车右上角 */
+          index: 1,
+          text: String(newgoods.length),
+        })
+
         this.zong()
       }
     }
+
   },
+
   /**
   * 结算
   */

@@ -6,27 +6,20 @@ page{
 
 .details .topde{
 	display: flex;
-	/* background-color: #ec5d63; */
 	width: 280rpx;
 	margin: 0 auto;
 	text-align: center;
-
-
 }
 
 .details .topde .image1 {
-	/* display: block; */
 	width: 30rpx;
 	height: 30rpx;
-	/* vertical-align: middle; */
 	margin-top: 10rpx;
-
 }
 .details .topde .image {
 	display: block;
 	width: 50rpx;
 	height: 50rpx;
-	/* vertical-align: middle; */
 	margin-right: 10rpx;
 }
 .details .topde .picker{

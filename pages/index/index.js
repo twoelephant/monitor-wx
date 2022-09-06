@@ -1,7 +1,6 @@
 import QNRTC from 'qnwxapp-rtc'
 console.log(QNRTC.VERSION)
 const client = QNRTC.createClient()
-
 // index.js
 // 获取应用实例
 const app = getApp()
@@ -23,13 +22,11 @@ Page({
     wrapWidth: 0,
 
     //用户信息
-    avatar: '',
-    nickName: '',
     hasUserInfo: false,//是否获取到用户信息，默认为false
     loginOk: false,    //后台登录状态，默认为false
-    enter:false,
-
-
+    enter:false,       //是否在店内
+  
+    
     displaygua: 'display: none',    //挂断button状态
     expireAt: '',
     roomName: '001',
@@ -72,7 +69,6 @@ Page({
         expireAt: _this.data.expireAt
       },
       success(res) {
-        console.log(res.data.data)
         _this.setData({
           roomToken: res.data.data
         })
@@ -97,11 +93,9 @@ Page({
     })
   },
   getUserProfile(e) {
-    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
     wx.getUserProfile({
       desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
-        // console.log(res)
         this.setData({
           hasUserInfo: true, //给登录状态设置为真
           loginOk: true
@@ -120,9 +114,8 @@ Page({
     })
   },
 
-
   onShow() {
-    // this.initAnimation(this.data.text); //关掉广播，取消注释可播放广播
+    this.initAnimation(this.data.text); //关掉广播
   },
   onHide() {
     //关掉广播
@@ -137,7 +130,6 @@ Page({
     this.setData({
       timer: null
     })
-
   },
   //卸载定时器
   destroyTimer() {

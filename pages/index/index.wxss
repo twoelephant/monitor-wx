@@ -13,10 +13,7 @@
 }
 
 .nav-bar .top {
-
   display: flex;
-  /* padding-left: 10rpx; */
-  /* padding-right: 10rpx; */
   margin: 0 10rpx;
   width: 100%;
 }
@@ -27,7 +24,6 @@
 
 .nav-bar .top .row1 view {
   font-size: 32rpx;
-  /* line-height: 32px; */
   line-height: 2;
 }
 
@@ -35,9 +31,6 @@
   margin-left: 133rpx;
   font-size: 32rpx;
   line-height: 2;
-
-  /* line-height: 32px; */
-
 }
 
 .nav-bar .top .row1 image {
@@ -45,20 +38,16 @@
   height: 40rpx;
   display: inline-block;
   vertical-align: middle;
-  /* margin-top: 12rpx; */
 }
 
 
 .faIndex .index {
-  /* height: 100%; */
   background-color: #ec5d63;
   color: #fdf4f0;
   padding-bottom: 100rpx;
   border-bottom-left-radius: 30rpx;
   border-bottom-right-radius: 30rpx;
 }
-
-
 
 /* 这是一个分界线 */
 .faIndex .index .top1 {
@@ -71,7 +60,6 @@
   width: 375rpx;
   height: 162rpx;
   text-align: center;
-
 }
 
 .faIndex .index .top1 .row2 {
@@ -86,7 +74,6 @@
   height: 100rpx;
 }
 
-
 .faIndex .index1 {
   position: relative;
   margin: 0 15rpx;
@@ -100,16 +87,11 @@
   padding-top: 20rpx;
   text-align: center;
   font-size: 35rpx;
-
-  /* font-weight: 550; */
-  /* font-weight:bold; */
 }
 
 .faIndex .index1 .text1 {
   display: flex;
-  /* background-color: red; */
   padding-top: 10rpx;
-  /* height: 100rpx; */
   width: 75%;
   margin: 0 auto;
 }
@@ -123,7 +105,6 @@
   line-height: 60rpx;
   font-size: 45rpx;
   border-radius: 35rpx;
-  /* margin: 0 auto; */
 }
 
 .faIndex .index1 .text1 .text3 {
@@ -137,14 +118,11 @@
 
   width: 90%;
   display: flex;
-  /* padding-left: 40rpx; */
   padding-top: 10rpx;
   margin: 0 auto;
 }
 
 .faIndex .index1 .step view {
-  /* margin: 0 20rpx; */
-  /* width: 80%; */
   flex: 1;
   text-align: center;
 }
@@ -174,7 +152,6 @@
   background: #ffffff;
   padding: 10rpx 15rpx;
   border-radius: 40rpx;
-
 }
 
 .left-box {
@@ -221,7 +198,6 @@
   left: 10%;
   background-color: #ffffff;
   width: 80%;
-  /* height: 60%; */
   opacity: 1;
   color: #969696;
   border-radius: 20rpx;
@@ -272,8 +248,6 @@
   top: 40%;
   width: 100%;
   color: #ffffff;
-  /* height: 40%; */
-  /* background-color: #ffffff; */
   opacity: 1;
   z-index: 200;
 }
@@ -316,7 +290,6 @@
   height: 65rpx;
   display: block;
   margin: 0 auto;
-
 }
 
 .faenter .guaduan image {
@@ -325,7 +298,6 @@
   display: block;
   margin: 50rpx auto;
 }
-
 
 /*提示现在不是无人售货模式页面的样式 */
 .falogin1 {
@@ -344,7 +316,6 @@
   left: 10%;
   background-color: #ffffff;
   width: 80%;
-  /* height: 60%; */
   opacity: 1;
   color: #969696;
   border-radius: 20rpx;
@@ -355,14 +326,12 @@
 .login1 .faimage11 {
   width: 100%;
   height: 60rpx;
-
 }
 
 .login1 .faimage11 .image11 {
   display: block;
   width: 60rpx;
   height: 60rpx;
-
   float: right;
   margin: 5rpx 5rpx;
 }

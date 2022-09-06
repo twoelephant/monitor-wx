@@ -7,6 +7,64 @@ App({
     menuHeight: 0, // 胶囊高度（自定义内容可与胶囊高度保证一致） ,用了
     userInfo: null, //通过微信获取到的用户头像和用户名等信息
     code: '', //通过wx.login获得的临时登录凭证，用来传给后台获取用户手机号
+
+    //购物车数据
+    goods: [{
+      id: '1',
+      src: '/image/shangpin.png',
+      name: '薯片',
+      price: '13.5',
+      num: '1',
+    },
+    {
+      id: '2',
+      src: '/image/shangpin.png',
+      name: '薯片',
+      price: '12.65',
+      num: '1',
+    },
+    {
+      id: '3',
+      src: '/image/shangpin.png',
+      name: '薯片',
+      price: '10.8',
+      num: '1',
+    },
+    {
+      id: '4',
+      src: '/image/shangpin.png',
+      name: '薯片',
+      price: '12',
+      num: '1',
+    },
+    {
+      id: '5',
+      src: '/image/shangpin.png',
+      name: '薯片',
+      price: '16',
+      num: '1',
+    },
+    {
+      id: '6',
+      src: '/image/shangpin.png',
+      name: '薯片',
+      price: '14',
+      num: '2',
+    },
+    {
+      id: '7',
+      src: '/image/shangpin.png',
+      name: '薯片',
+      price: '14',
+      num: '2',
+    }, {
+      id: '8',
+      src: '/image/shangpin.png',
+      name: '薯片',
+      price: '14',
+      num: '2',
+    },
+    ],
   },
   onLaunch() {
 
@@ -23,17 +81,18 @@ App({
     that.globalData.menuTop = menuButtonInfo.top;
     that.globalData.menuHeight = menuButtonInfo.height;
 
-    // 展示本地存储能力
-    // const logs = wx.getStorageSync('logs') || []
-    // logs.unshift(Date.now())
-    // wx.setStorageSync('logs', logs)
+    wx.setTabBarBadge({ /* 获取购物车数量显示在购物车右上角 */
+      index: 1,
+      text: String(this.globalData.goods.length),
+    })
 
+    
     // 登录
     wx.login({
       success: res => {
         // console.log(res)
         that.globalData.code = res.code
-        // console.log(that.globalData.code)
+       
 
         /* 做一个请求传递code到后台获取用户手机号 */
         // wx.request({

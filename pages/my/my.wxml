@@ -1,10 +1,12 @@
-
+<page-meta>
+  <navigation-bar title="{{nbTitle}}" />
+</page-meta>
 <view style="background-color:#f2f2f2 ;">
 <view class="mymessage">
   <view class="userab">
-    <image class="myavater" />
+    <image class="myavater" src="{{userInfo.avatarUrl}}" />
     <view class="user">
-      <view class="nickname"> 小程序用户</view>
+      <view class="nickname">{{userInfo.nickName}} </view>
       <view class="viplv">普通会员</view>
     </view>
     <image class="myerwei" src="/image/erweima.png" />
@@ -59,8 +61,6 @@
 </view>
 </view>
 </view>
-<page-meta>
-  <navigation-bar title="{{nbTitle}}" front-color="{{nbFrontColor}}" background-color="{{nbBackgroundColor}}" color-animation-duration="2000" color-animation-timing-func="easeIn" />
-</page-meta>
+
 
 

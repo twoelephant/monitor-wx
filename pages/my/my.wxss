@@ -14,6 +14,7 @@
   height: 12vh;
   width: 12vh;
   border-radius: 6vh;
+  margin-left: 3vw;
 }
 .user{
   
@@ -23,16 +24,18 @@
 }
 .nickname{
   color: #ffffff;
-  font-size: 3.5vw;
+  font-size: 4vw;
 }
 .viplv{
   background-color: #000000;
   color: #ffffff;
-  width: 13vw;
-  margin-top: 3vh;
-  font-size: 3vw;
-  border-radius: 1vh;
-  padding: 0.5vw;
+  width: 15vw;
+  margin-top: 2vh;
+  font-size: 2.8vw;
+  letter-spacing: 1px;
+  border-radius: 2vh;
+  padding: 0.5vw 0;
+  text-align: center;
 }
 .myerwei{
   width: 8vh;
