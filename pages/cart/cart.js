@@ -78,6 +78,10 @@ Page({
    */
   onLoad(options) {
     this.zong()
+    wx.setTabBarBadge({ /* 获取购物车数量显示在购物车右上角 */
+      index: 1,
+      text: String(this.data.goods.length),
+    })
   },
 
   /**
