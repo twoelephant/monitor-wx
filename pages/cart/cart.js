@@ -8,55 +8,55 @@ Page({
   data: {
     goods: [{
         id: '1',
-        src: '../image/shangpin.png',
+        src: '/image/shangpin.png',
         name: '薯片',
         price: '13.5',
         num: '1',
       },
       {
         id: '2',
-        src: '../image/shangpin.png',
+        src: '/image/shangpin.png',
         name: '薯片',
         price: '12.65',
         num: '1',
       },
       {
         id: '3',
-        src: '../image/shangpin.png',
+        src: '/image/shangpin.png',
         name: '薯片',
         price: '10.8',
         num: '1',
       },
       {
         id: '4',
-        src: '../image/shangpin.png',
+        src: '/image/shangpin.png',
         name: '薯片',
         price: '12',
         num: '1',
       },
       {
         id: '5',
-        src: '../image/shangpin.png',
+        src: '/image/shangpin.png',
         name: '薯片',
         price: '16',
         num: '1',
       },
       {
         id: '6',
-        src: '../image/shangpin.png',
+        src: '/image/shangpin.png',
         name: '薯片',
         price: '14',
         num: '2',
       },
       {
         id: '7',
-        src: '../image/shangpin.png',
+        src: '/image/shangpin.png',
         name: '薯片',
         price: '14',
         num: '2',
       }, {
         id: '8',
-        src: '../image/shangpin.png',
+        src: '/image/shangpin.png',
         name: '薯片',
         price: '14',
         num: '2',
@@ -68,7 +68,7 @@ Page({
       text:'删除',
       type:'warn',
       extClass:'deleteicon',
-      src:'/pages/image/del.png'
+      src:'/image/del.png'
      
   }]
   },

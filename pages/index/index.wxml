@@ -9,7 +9,7 @@
     <view class="top" style="min-height:{{menuHeight}}px;position: fixed;top:{{menuTop}}px ;">
       <view class="row1" bindtap="">
         <view>
-          <image src="../image/dingwei1.png" />
+          <image src="/image/dingwei1.png" />
         </view>
 
         <view>切换门店</view>
@@ -24,11 +24,11 @@
   <view class="index">
     <view class="top1">
       <view class="row1" bindtap="cancleCsao">
-        <image src="../image/saoyidao.png"></image>
+        <image src="/image/saoyidao.png"></image>
         <view>扫一扫</view>
       </view>
       <view class="row2">
-        <image src="../image/chongzhi.png"></image>
+        <image src="/image/chongzhi.png"></image>
         <view>会员充值</view>
       </view>
     </view>
@@ -63,7 +63,7 @@
   <view class="notice">
     <view class="left-box">
       <view class="left-text">
-        <image src="../image/laba.png" style="width: 40rpx;height: 40rpx;"></image>
+        <image src="/image/laba.png" style="width: 40rpx;height: 40rpx;"></image>
       </view>
       <view class='content-box'>
         <view class='content-text' animation="{{animationData}}"><text id="text">{{text}}</text></view>
@@ -74,7 +74,7 @@
 
   <!-- 广告 -->
   <view class="advertise">
-    <image src="../image/image1.png"></image>
+    <image src="/image/image1.png"></image>
   </view>
 </view>
 
@@ -84,7 +84,7 @@
 	<view class="falogin" catchtouchmove='false'></view>
 	<view class="login">
 		<view class="faimage1">
-			<image src="../image/guanbi.png" class="image1" bindtap="cancleClick"></image>
+			<image src="/image/guanbi.png" class="image1" bindtap="cancleClick"></image>
 		</view>
 
 		<image src="" class="image2"></image>
@@ -104,24 +104,24 @@
     <view class="enter">
       <view class="view1" bindtap="cancleCall">
         <view style="margin-top: 40rpx;" >
-          <image src="../image/hujiao1.png" style="margin: 0 auto; display: block;"></image>
+          <image src="/image/hujiao1.png" style="margin: 0 auto; display: block;"></image>
           <view style="text-align: center;">呼叫客服</view>
         </view>
 
       </view>
       <view class="view2" bindtap="enterClick">
         <view style="margin-top: 40rpx;" >
-          <image src="../image/kaimen.png" style="margin: 0 auto; display: block;"></image>
+          <image src="/image/kaimen.png" style="margin: 0 auto; display: block;"></image>
           <view style="text-align: center;">扫码进店</view>
         </view>
       </view>
     </view>
 
     <view class="faimage3">
-      <image src="../image/guanbi1.png" bindtap="cancleClick1"></image>
+      <image src="/image/guanbi1.png" bindtap="cancleClick1"></image>
     </view>
     <view class="guaduan" style="{{displaygua}}" bindtap="cancleCgd">
-      <image src="../image/guaduan.png"></image>
+      <image src="/image/guaduan.png"></image>
     </view>
 
   </view>
@@ -137,21 +137,21 @@
     <view class="enter">
       <view class="view1">
         <view style="margin-top: 40rpx;">
-          <image src="../image/hujiao1.png" style="margin: 0 auto; display: block;"></image>
+          <image src="/image/hujiao1.png" style="margin: 0 auto; display: block;"></image>
           <view style="text-align: center;">呼叫客服</view>
         </view>
 
       </view>
       <view class="view2">
         <view style="margin-top: 40rpx;">
-          <image src="../image/kaimen.png" style="margin: 0 auto; display: block;"></image>
+          <image src="/image/kaimen.png" style="margin: 0 auto; display: block;"></image>
           <view style="text-align: center;">扫码出店</view>
         </view>
       </view>
     </view>
 
     <view class="faimage3">
-      <image src="../image/guanbi1.png" bindtap="cancleClick1"></image>
+      <image src="/image/guanbi1.png" bindtap="cancleClick1"></image>
 
     </view>
 
@@ -166,10 +166,10 @@
   <view class="falogin1" catchtouchmove='false'></view>
   <view class="login1">
     <view class="faimage11">
-      <image src="../image/guanbi.png" class="image11" bindtap="cancleClick"></image>
+      <image src="/image/guanbi.png" class="image11" bindtap="cancleClick"></image>
     </view>
 
-    <image src="../image/kaimen2.png" class="image21"></image>
+    <image src="/image/kaimen2.png" class="image21"></image>
 
     <view class="lr11"> 当前门店未开启无人零售</view>
     <view class="lr11"> 暂时无法扫码开门</view>

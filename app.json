@@ -12,20 +12,20 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "pages/image/主页.png",
-        "selectedIconPath": "pages/image/主页 (2).png",
+        "iconPath": "/image/home.png",
+        "selectedIconPath": "/image/home02.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/cart/cart",
-        "iconPath": "pages/image/gouwuche.png",
-        "selectedIconPath": "pages/image/gouwuche1.png",
+        "iconPath": "/image/gouwuche.png",
+        "selectedIconPath": "/image/gouwuche1.png",
         "text": "购物车"
       },
       {
         "pagePath": "pages/my/my",
-        "iconPath": "pages/image/我的.png",
-        "selectedIconPath": "pages/image/我的 (2).png",
+        "iconPath": "/image/my.png",
+        "selectedIconPath": "/image/my.png",
         "text": "我的"
       }
     ]
