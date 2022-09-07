@@ -97,7 +97,6 @@ Page({
           index: 1,
           text: String(newgoods.length),
         })
-
         this.zong()
       }
     }
