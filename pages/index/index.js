@@ -1,12 +1,39 @@
 import QNRTC from 'qnwxapp-rtc'
 console.log(QNRTC.VERSION)
 const client = QNRTC.createClient()
+
+import QNPublishStatus from "qnwxapp-rtc"
+client.publish((status, data) => {
+  if (status === QNPublishStatus.READY) {
+    this.setData({
+      publishPath: data.url
+    })
+  }
+})
+
+client.on('user-published', async (userID, tracks) => {
+  const url = await client.subscribe({
+      videoTrack: tracks.find(track => track.isVideo()),
+      audioTrack: tracks.find(track => track.isAudio())
+  })
+  this.setData({
+      subscribeList: [...this.data.subscribeList, url]
+  })
+});
 // index.js
 // 获取应用实例
 const app = getApp()
 
 Page({
+
+  handleStateChange(e) {     //监听推流是否成功
+    console.log('live-pusher code:', e.detail.code)
+  },
+
   data: {
+    publishPath: '',
+    subscribeList: [],
+    // item:'',
     shopName: "店铺名称",
     // fit:false,
     menuHeight: 0,
@@ -30,7 +57,7 @@ Page({
     displaygua: 'display: none',    //挂断button状态
     expireAt: '',
     roomName: '001',
-    userId: '002',
+    userId: 'aaa',
     roomToken: '',
   },
 
@@ -65,7 +92,7 @@ Page({
       },
       data: {
         roomName: _this.data.roomName,
-        userId: _this.data.roomName,
+        userId: _this.data.userId,
         expireAt: _this.data.expireAt
       },
       success(res) {
