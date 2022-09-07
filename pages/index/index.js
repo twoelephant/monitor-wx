@@ -39,7 +39,7 @@ Page({
     displaygua: 'display: none',    //挂断button状态
     expireAt: '',
     roomName: '001',
-    userId: 'aaa',
+    userId: 'ccc',
     roomToken: '',
   },
 
@@ -54,11 +54,39 @@ Page({
       loginOk: false,
     })
   },
+
+  getpublishPath() {
+    client.publish((status, data) => {
+      console.log("callback: publish - 发布后回调", status, data);
+      if (status === "READY") {
+        console.log(data.url);
+        this.setData({
+          publishPath: data.url
+        })
+        console.log(this.data.publishPath);
+      } else if (status === QNPublishStatus.COMPLETED) {
+        this.setData({
+          localTracks: data.tracks
+        })
+        console.log(this.data.localTracks);
+      } else if (status === QNPublishStatus.ERROR) {
+        console.log("发布失败")
+      }
+    })
+    client.on('user-published', async (userID, tracks) => {
+      const url = await client.subscribe({
+        videoTrack: tracks.find(track => track.isVideo()),
+        audioTrack: tracks.find(track => track.isAudio())
+      })
+      this.setData({
+        subscribeList: [...this.data.subscribeList, url]
+      })
+    });
+  },
+
+
   cancleCsao() {           //扫一扫
-
     console.log(QNRTC.VERSION)
-
-
     let date = new Date()
     let b = date.getTime()
     let c = b + 3600000
@@ -86,36 +114,13 @@ Page({
           roomToken: res.data.data
         })
         console.log(res);
+        _this.getpublishPath()
       }
     })
-    /////////////////////////////////////////////////////////////////////////////
-    client.publish((status, data) => {
-      console.log("callback: publish - 发布后回调", status, data);
-      if (status === "READY") {
-        console.log(data.url);
-        this.setData({
-          publishPath: data.url
-        })
-        console.log(this.data.publishPath);
-      } else if (status === QNPublishStatus.COMPLETED) {
-        this.setData({
-          localTracks: data.tracks
-        })
-        console.log(this.data.calTracks);
-      } else if (status === QNPublishStatus.ERROR) {
-        console.log("发布失败")
-      }
-    })
-    client.on('user-published', async (userID, tracks) => {
-      const url = await client.subscribe({
-        videoTrack: tracks.find(track => track.isVideo()),
-        audioTrack: tracks.find(track => track.isAudio())
-      })
-      this.setData({
-        subscribeList: [...this.data.subscribeList, url]
-      })
-    });
   },
+
+  
+
   cancleCall() {          //呼叫客服
     client.join(this.data.roomToken)
 

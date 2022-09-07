@@ -91,7 +91,7 @@
 <!-- 扫码进店、呼叫客服页面 -->
 <block wx:if="{{loginOk && enter}}">
   <view>
-    <live-pusher autopush mode="RTC" url="{{publishPath}}" bindstatechange="handleStateChange">
+    <live-pusher mode="RTC" url="{{publishPath}}" bindstatechange="handleStateChange">
     </live-pusher>
     <live-player autoplay src="{{item}}" mode="RTC" wx:for="{{subscribeList}}">
     </live-player>
