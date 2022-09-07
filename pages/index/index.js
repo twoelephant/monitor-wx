@@ -1,29 +1,10 @@
 import QNRTC from 'qnwxapp-rtc'
-console.log(QNRTC.VERSION)
-const client = QNRTC.createClient()
-
 import QNPublishStatus from "qnwxapp-rtc"
-client.publish((status, data) => {
-  if (status === QNPublishStatus.READY) {
-    this.setData({
-      publishPath: data.url
-    })
-  }
-})
 
-client.on('user-published', async (userID, tracks) => {
-  const url = await client.subscribe({
-      videoTrack: tracks.find(track => track.isVideo()),
-      audioTrack: tracks.find(track => track.isAudio())
-  })
-  this.setData({
-      subscribeList: [...this.data.subscribeList, url]
-  })
-});
 // index.js
 // 获取应用实例
 const app = getApp()
-
+const client = QNRTC.createClient()
 Page({
 
   handleStateChange(e) {     //监听推流是否成功
@@ -31,6 +12,7 @@ Page({
   },
 
   data: {
+    localTracks: '',
     publishPath: '',
     subscribeList: [],
     // item:'',
@@ -73,6 +55,10 @@ Page({
     })
   },
   cancleCsao() {           //扫一扫
+
+    console.log(QNRTC.VERSION)
+
+
     let date = new Date()
     let b = date.getTime()
     let c = b + 3600000
@@ -102,6 +88,33 @@ Page({
         console.log(res);
       }
     })
+    /////////////////////////////////////////////////////////////////////////////
+    client.publish((status, data) => {
+      console.log("callback: publish - 发布后回调", status, data);
+      if (status === "READY") {
+        console.log(data.url);
+        this.setData({
+          publishPath: data.url
+        })
+        console.log(this.data.publishPath);
+      } else if (status === QNPublishStatus.COMPLETED) {
+        this.setData({
+          localTracks: data.tracks
+        })
+        console.log(this.data.calTracks);
+      } else if (status === QNPublishStatus.ERROR) {
+        console.log("发布失败")
+      }
+    })
+    client.on('user-published', async (userID, tracks) => {
+      const url = await client.subscribe({
+        videoTrack: tracks.find(track => track.isVideo()),
+        audioTrack: tracks.find(track => track.isAudio())
+      })
+      this.setData({
+        subscribeList: [...this.data.subscribeList, url]
+      })
+    });
   },
   cancleCall() {          //呼叫客服
     client.join(this.data.roomToken)
@@ -109,6 +122,7 @@ Page({
     this.setData({
       displaygua: 'display: '
     })
+
   },
   enterClick() { //开门进店
     console.log("开门进店")
