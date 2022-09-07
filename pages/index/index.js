@@ -24,9 +24,9 @@ Page({
     //用户信息
     hasUserInfo: false,//是否获取到用户信息，默认为false
     loginOk: false,    //后台登录状态，默认为false
-    enter:false,       //是否在店内
-  
-    
+    enter: false,       //是否在店内
+
+
     displaygua: 'display: none',    //挂断button状态
     expireAt: '',
     roomName: '001',
@@ -72,6 +72,7 @@ Page({
         _this.setData({
           roomToken: res.data.data
         })
+        console.log(res);
       }
     })
   },
