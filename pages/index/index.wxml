@@ -2,48 +2,48 @@
 <view class="faIndex">
 
   <!-- 导航栏 -->
-  <view class=".nav-bar" style="height:{{navBarHeight}}px;">
+  <view class="nav-bar" style="height:{{navBarHeight}}px;">
     <view class="top" style="min-height:{{menuHeight}}px;position: fixed;top:{{menuTop}}px ;">
-      <view class="row1" bindtap="">
+      <view class="location">
         <view>
           <image src="/image/dingwei1.png" />
         </view>
 
         <view>切换门店</view>
       </view>
-      <view class="row2">{{shopName}}</view>
+      <view class="shopName">{{shopName}}</view>
     </view>
   </view>
   <view style="height:{{navBarHeight}}px;"></view>
 
 
 
-  <view class="index">
-    <view class="top1">
-      <view class="row1" bindtap="cancleCsao">
+  <view class="headOut">
+    <view class="head">
+      <view class="location" bindtap="cancleCsao">
         <image src="/image/saoyidao.png"></image>
         <view>扫一扫</view>
       </view>
-      <view class="row2">
+      <view class="shopName">
         <image src="/image/chongzhi.png"></image>
         <view>会员充值</view>
       </view>
     </view>
   </view>
 
-  <view class="index1">
-    <view class="text">折扣牛超市购物流程</view>
-    <view class="text1">
-      <view class="text2"> 1 </view>
-      <view class="text3"> </view>
+  <view class="stepOut">
+    <view class="stepTitle">折扣牛超市购物流程</view>
+    <view class="stepBorder">
+      <view class="numCircular"> 1 </view>
+      <view class="numLine"> </view>
 
-      <view class="text2"> 2 </view>
-      <view class="text3"> </view>
+      <view class="numCircular"> 2 </view>
+      <view class="numLine"> </view>
 
-      <view class="text2"> 3 </view>
-      <view class="text3"> </view>
+      <view class="numCircular"> 3 </view>
+      <view class="numLine"> </view>
 
-      <view class="text2"> 4 </view>
+      <view class="numCircular"> 4 </view>
     </view>
     <view class="step">
       <view>扫码进店</view>
@@ -82,8 +82,8 @@
 
     <image src="" class="image2"></image>
 
-    <view class="lr1">无人自助</view>
-    <view class="lr1"> 安全登录确认</view>
+    <view class="outText">无人自助</view>
+    <view class="outText"> 安全登录确认</view>
     <button bindtap="getUserProfile" style="width: 80%;">登录</button>
   </view>
 </block>
@@ -109,14 +109,14 @@
   <view class="faenter">
 
     <view class="enter">
-      <view class="view1" bindtap="cancleCall">
+      <view class="callSerive" bindtap="cancleCall">
         <view style="margin-top: 40rpx;">
           <image src="/image/hujiao1.png" style="margin: 0 auto; display: block;"></image>
           <view style="text-align: center;">呼叫客服</view>
         </view>
 
       </view>
-      <view class="view2" bindtap="enterClick">
+      <view class="enterStore" bindtap="enterClick">
         <view style="margin-top: 40rpx;">
           <image src="/image/kaimen.png" style="margin: 0 auto; display: block;"></image>
           <view style="text-align: center;">扫码进店</view>
@@ -125,9 +125,9 @@
     </view>
 
     <view class="faimage3">
-      <image src="/image/guanbi1.png" bindtap="cancleClick1" style="{{displaygua1}}"></image>
+      <image src="/image/guanbi1.png" bindtap="cancleClick1" style="{{hangUp}}"></image>
     </view>
-    <view class="guaduan" style="{{displaygua}}" bindtap="cancleCgd">
+    <view class="guaduan" style="{{showOther}}" bindtap="cancleCgd">
       <image src="/image/guaduan.png"></image>
     </view>
 

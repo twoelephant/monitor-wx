@@ -1,15 +1,15 @@
-.mymessage{
+.userMessage{
   width: 100%;
   background-color: #ffffff;
 }
-.userab{
+.aboutUser{
   width: 100%;
   display: flex;
   background-color: #ec5d63;
   height: 13vh;
   padding: 5vw 3vw;
 }
-.myavater{
+.userAvater{
   background-color: #ffffff;
   height: 12vh;
   width: 12vh;
@@ -22,11 +22,11 @@
   margin-left: 3%;
   margin-top: 1vh;
 }
-.nickname{
+.nickName{
   color: #ffffff;
   font-size: 4vw;
 }
-.viplv{
+.vipLv{
   background-color: #000000;
   color: #ffffff;
   width: 15vw;
@@ -37,32 +37,32 @@
   padding: 0.5vw 0;
   text-align: center;
 }
-.myerwei{
+.QRCode{
   width: 8vh;
   height: 8vh;
   margin: auto 0 ;
 }
-.useruse{
+.userUse{
   display: flex;
   color: #cc6472;
   margin: 2vh 0;
   font-size: 3vw;
 }
-.useruse view{
+.userUse view{
   margin:auto;
   text-align: center;
 }
-.usertext{
+.aboutVip{
   letter-spacing: 2px;
   background-color: #efb4b8;
   padding: 4vw;
   color: #e66a6a;
   font-size: 3vw;
 }
-.userlink{
+.vipLink{
   margin: 0 0 0 35vw;
 }
-.buyding{
+.buyOrder{
   background-color: #ffffff;
   margin-top: 3vh;
   width: 100vw;
@@ -71,12 +71,12 @@
   letter-spacing: 1px;
   font-size: 3.5vw;
 }
-.buylink{
+.orderLink{
   margin-left: 45vw;
   color: #bebebe;
   
 }
-.userbuy{
+.aboutBuy{
   background-color: #ffffff;
   display: flex;
   padding: 2vh;
@@ -87,7 +87,7 @@
   width: 8vw;
   height: 8vw;
 }
-.userbuy view{
+.aboutBuy view{
   width: 20vw;
   text-align: center;
   font-size: 2.8vw;
@@ -96,11 +96,11 @@
 .service{
   background-color: #ffffff;
 }
-.userservice{
+.userService{
   display: flex;
   flex-wrap: wrap;
 }
-.userservice view{
+.userService view{
   width: 20vw;
   text-align: center;
   font-size: 2.8vw;

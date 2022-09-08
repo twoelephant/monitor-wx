@@ -3,26 +3,26 @@
   <navigation-bar title="购物车" />
 </page-meta>
 <!-- 从后端获取的商品数据 -->
-<view class="bigwai">
+<view class="cart">
   <view class="goods" wx:for="{{goods}}" wx:key="index">
   <!-- 滑动组件 -->
     <mp-slideview buttons="{{slideButtons}}" icon='{{true}}' bindbuttontap="slideButtonTap" data-id="{{item.id}}">
-      <view class="delete">
-        <view class="goodsmessage">
-          <view class="goodsimg">
+      <view class="goods-delete">
+        <view class="goodsMessage">
+          <view class="goodsImage">
             <image src="{{item.src}}" />
           </view>
 
-          <view class="goodsname">
-            <text class="name"> {{item.name}}</text>
-            <view class="themessage">商品信息</view>
-            <view class="goodsprice">
+          <view class="aboutGoods">
+            <text class="theName"> {{item.name}}</text>
+            <view class="theMessage">商品信息</view>
+            <view class="goodsPrice">
               <text class="money"> ￥<text>{{item.price}}</text></text>
-              <view class="changenum">
-                <image wx:if="{{item.num != 1}}" data-id="{{item.id}}" bindtap="down" src="/image/jian1.png" />
+              <view class="changeNum">
+                <image wx:if="{{item.num != 1}}" data-id="{{item.id}}" bindtap="cutGoods" src="/image/jian1.png" />
                 <image wx:if="{{item.num == 1}}" src="/image/jian2.png" />
-                <view class="num">{{item.num}}</view>
-                <image data-id="{{item.id}}" bindtap="up" src="/image/jia.png" />
+                <view class="goodsNum">{{item.num}}</view>
+                <image data-id="{{item.id}}" bindtap="addGoods" src="/image/jia.png" />
               </view>
             </view>
           </view>
@@ -33,6 +33,6 @@
   </view>
 </view>
 <!-- 结算栏 -->
-<view class="balance"><text>总计：￥{{total}}</text>
+<view class="balance"><text>总计：￥{{goodsTotal}}</text>
   <view bindtap="jiesuan">结算</view>
 </view>

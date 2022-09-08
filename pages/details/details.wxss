@@ -4,35 +4,37 @@ page{
 	height: 100%;
 }
 
-.details .topde{
+.details .detailDate{
 	display: flex;
 	width: 280rpx;
 	margin: 0 auto;
 	text-align: center;
 }
 
-.details .topde .image1 {
+.details .detailDate .xiaLa {
 	width: 30rpx;
 	height: 30rpx;
 	margin-top: 10rpx;
 }
-.details .topde .image {
+.details .detailDate .image {
 	display: block;
 	width: 50rpx;
 	height: 50rpx;
 	margin-right: 10rpx;
 }
-.details .topde .picker{
+.details .detailDate .picker{
 	font-size: 35rpx;
 }
 
-.details .row1{
+.details .order{
 	margin: 0 10rpx;
 	border-radius: 20rpx;
 	height: 240rpx;
-	box-shadow:5px 5px 5px gainsboro;
+  box-shadow:5px 5px 5px gainsboro;
+  background-color: #ffffff;
+  margin-bottom: 5rpx;
 }
-.details .row1 .choose1 {
+.details .order .orderMessage {
 	color: #bebebe;
 
 }

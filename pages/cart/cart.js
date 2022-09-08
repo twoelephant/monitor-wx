@@ -7,8 +7,7 @@ Page({
    */
   data: {
     goods: [],
-    buylist: [],
-    total: 0,
+    goodsTotal: 0,
     slideButtons: [{
       text: '删除',
       type: 'warn',
@@ -21,13 +20,13 @@ Page({
    * 生命周期函数--监听页面加载,在页面加载时要获取扫面商品信息
    */
   onLoad(options) {
-   
+
     //获取购物车信息
     this.setData({
-      goods:app.globalData.goods
+      goods: app.globalData.goods
     })
     this.zong()
-   
+
   },
 
   /**
@@ -40,42 +39,42 @@ Page({
    * 总金额
    */
   zong() {
-    let newtotal = 0;
+    let newTotal = 0;
     this.data.goods.map((item) => {
       let a = parseFloat(item.price) * parseInt(item.num)
-      newtotal += a
+      newTotal += a
     })
-    newtotal = Math.floor(newtotal*100)/100
-    this.setData(
-      { total: newtotal }
-    )
+    newTotal = Math.floor(newTotal * 100) / 100
+    this.setData({
+      goodsTotal: newTotal
+    })
   },
   /**
    * 商品数量,添加或减少
    */
-  up(e) {
-    let nowid = e.currentTarget.dataset.id
+  addGoods(e) {
+    let nowId = e.currentTarget.dataset.id
     for (let i = 0; i < this.data.goods.length; i++) {
-      if (this.data.goods[i].id === nowid) {
-        let ab = 'goods[' + i + '].num'
-        let s = parseInt(this.data.goods[i].num)
-        ++s
+      if (this.data.goods[i].id === nowId) {
+        let aGoods = 'goods[' + i + '].num'
+        let goodsNum = parseInt(this.data.goods[i].num)
+          ++goodsNum
         this.setData({
-          [ab]: s
+          [aGoods]: goodsNum
         })
         this.zong()
       }
     }
   },
-  down(e) {
-    let nowid = e.currentTarget.dataset.id
+  cutGoods(e) {
+    let nowId = e.currentTarget.dataset.id
     for (let i = 0; i < this.data.goods.length; i++) {
-      if (this.data.goods[i].id === nowid) {
-        let ab = 'goods[' + i + '].num'
-        let s = parseInt(this.data.goods[i].num)
-        --s
+      if (this.data.goods[i].id === nowId) {
+        let aGoods = 'goods[' + i + '].num'
+        let goodsNum = parseInt(this.data.goods[i].num)
+          --goodsNum
         this.setData({
-          [ab]: s
+          [aGoods]: goodsNum
         })
         this.zong()
       }
@@ -93,8 +92,9 @@ Page({
         this.setData({
           goods: newgoods
         })
-        app.globalData.goods=newgoods
-        wx.setTabBarBadge({ /* 获取购物车数量显示在购物车右上角 */
+        app.globalData.goods = newgoods
+        wx.setTaGoodsBarBadge({
+          /* 获取购物车数量显示在购物车右上角 */
           index: 1,
           text: String(newgoods.length),
         })
@@ -105,8 +105,8 @@ Page({
   },
 
   /**
-  * 结算
-  */
+   * 结算
+   */
   jiesuan() {
 
   },

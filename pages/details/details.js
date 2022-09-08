@@ -4,11 +4,7 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {
-    nbFrontColor: '#000000',
-    nbBackgroundColor: '#ffffff',
-    timeNow: '',
-  },
+  data: { },
   bindDateChange(e) {
     /* 改变日期 */
     this.setData({
@@ -21,10 +17,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    var today = new Date()
+    let today = new Date()
     let year = today.getFullYear()
     let month = today.getMonth()
-    let date = today.getDate()
     this.setData({
       timeNow: year + "-" + "0" + (month + 1),
     })

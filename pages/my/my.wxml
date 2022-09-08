@@ -2,16 +2,16 @@
   <navigation-bar title="{{nbTitle}}" />
 </page-meta>
 <view style="background-color:#f2f2f2 ;">
-<view class="mymessage">
-  <view class="userab">
-    <image class="myavater" src="{{userInfo.avatarUrl}}" />
+<view class="userMessage">
+  <view class="aboutUser">
+    <image class="userAvater" src="{{userInfo.avatarUrl}}" />
     <view class="user">
-      <view class="nickname">{{userInfo.nickName}} </view>
-      <view class="viplv">普通会员</view>
+      <view class="nickName">{{userInfo.nickName}} </view>
+      <view class="vipLv">普通会员</view>
     </view>
-    <image class="myerwei" src="/image/erweima.png" />
+    <image class="QRCode" src="/image/erweima.png" />
   </view>
-  <view class="useruse">
+  <view class="userUse">
     <view>0<view>可用积分</view>
     </view>
     <view>0<view>优惠券</view>
@@ -19,13 +19,13 @@
     <view>0<view>账户余额</view>
     </view>
   </view>
-  <view class="usertext"><text>开通会员，专享权益</text><text class="userlink">立刻开通>></text></view>
+  <view class="aboutVip"><text>开通会员，专享权益</text><text class="vipLink">立刻开通>></text></view>
 </view>
-<view class="buyding">
+<view class="buyOrder">
     <text>我的订单</text>
-    <text class="buylink" bindtap="handelclick">查看全部订单 ></text>
+    <text class="orderLink" bindtap="handelClick">查看全部订单 ></text>
   </view>
-<view class='userbuy'>
+<view class='aboutBuy'>
   <view>
     <image class="pictuer" src='/image/fukuan.png' />
     请付款
@@ -49,11 +49,11 @@
 </view>
 
 <view class="service">
-  <view class="buyding">
+  <view class="buyOrder">
     <text>我的服务</text>
   </view>
-  <view class='userservice'>
-  <view wx:for="{{imglist}}" wx:key="index">
+  <view class='userService'>
+  <view wx:for="{{imgList}}" wx:key="index">
     <image class="pictuer" src='{{item.src}}' />
     {{item.text}}
   </view>

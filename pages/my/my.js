@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-      imglist:[
+      imgList:[
         {src:'/image/youhuiquan.png',text:'领券中心'},
         {src:'/image/quanyi.png',text:'权益卡'},
         {src:'/image/zidongchongzhi.png',text:'自动充值'},
@@ -19,7 +19,7 @@ Page({
       userInfo:null,
   
   },
-  handelclick(){
+  handelClick(){
     wx.navigateTo({
       url: '../details/details',
     })

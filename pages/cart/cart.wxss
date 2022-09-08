@@ -1,5 +1,5 @@
 /* pages/cart/cart.wxss */
-.bigwai {
+.cart {
   height: 92vh;
   overflow: auto;
   background-color: #ececec;
@@ -15,7 +15,7 @@
   margin: 2vw auto 0vw;
 }
 
-.delete{
+.goods-delete{
   width: 100vw;
   height: 100%;
 }
@@ -23,7 +23,7 @@
   padding-left: 0;
 }
  
-.goodsmessage {
+.goodsMessage {
   background-color: #fff;
   flex: 1;
   display: flex;
@@ -34,28 +34,28 @@
   margin: auto auto;
 }
 
-.goodsmessage .goodsimg {
+.goodsMessage .goodsImage {
   width: 25vw;
   height: 25vw;
   margin: auto 0;
   margin-left: 3vw;
 }
-.goodsimg image{
+.goodsImage image{
   width: 95%;
   height: 95%;
   border-radius: 10px;
 }
-.goodsname {
+.aboutGoods {
   height: 25vw;
   margin: auto 0;
   margin-left: 2vw;
   flex: 1;
 }
-.goodsname .name{
+.aboutGoods .theName{
   font-size: 5vw;
   font-weight: bold;
 }
-.goodsname .themessage{
+.aboutGoods .theMessage{
   height: 8vw;
   width: 60vw;
   overflow: hidden;
@@ -63,7 +63,7 @@
  font-size: 4vw;
  margin-right: 4vw;
 }
-.goodsname .goodsprice {
+.aboutGoods .goodsPrice {
   width: 65vw;
   display: flex;
 }
@@ -77,19 +77,19 @@
   font-size: 5vw;
   font-weight: bold;
 }
-.changenum {
+.changeNum {
   width: 20vw;
   display: flex;
   margin-right: 4vw;
 }
-.changenum image {
+.changeNum image {
   width: 4vw;
   height: 4vw;
   margin: auto 0;
   padding: 0 1vw;
 }
 
-.num {
+.goodsNum {
   width: 10vw;
   height: 6vw;
   line-height: 6vw;
