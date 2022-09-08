@@ -49,14 +49,13 @@ Page({
     loginOk: false, //后台登录状态，默认为false
     enter: false, //是否在店内
 
-    hangUP: 'display: none', //挂断button状态
+    hangUp: 'display: none', //挂断button状态
     showOther: 'display: ', //挂断button状态
 
     expireAt: '', //通话结束时间
     roomName: '001', //roomName
     userId: 'ccc', //userId
     roomToken: '',
-
     display: ''
   },
 
@@ -152,7 +151,7 @@ Page({
     await client.join(this.data.roomToken)
     this.getpublishPath()
     this.setData({
-      hangUP: 'display: ',
+      hangUp: 'display: ',
       showOther: 'display: none'
 
     })
@@ -166,7 +165,7 @@ Page({
   cancleCgd() { //挂断
     client.leave()
     this.setData({
-      hangUP: 'display: none',
+      hangUp: 'display: none',
       showOther: 'display:'
     })
   },
