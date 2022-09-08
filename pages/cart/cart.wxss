@@ -7,12 +7,12 @@
 
 .goods {
   display: flex;
-  height: 32vw;
+  height: 33vw;
   width: 100%;
   font-size: 4vw;
   z-index: 1;
   box-sizing: border-box;
-  margin: 2vw auto 0;
+  margin: 2vw auto 0vw;
 }
 
 .delete{
@@ -103,12 +103,15 @@
   z-index: 2;
   background-color: #fff;
   height: 5vh;
+  width: 95vw;
   padding: 2vw;
   line-height: 5vh;
   display: flex;
   font-size: 4vw;
 }
-
+.balance text{
+  flex: 1;
+}
 .balance view {
   background-color: #f21a0c;
   width: 15vw;
@@ -118,5 +121,4 @@
   text-align: center;
   line-height: 5vh;
   margin: auto 0;
-  margin-left: 50vw;
 }
