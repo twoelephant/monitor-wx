@@ -4,14 +4,10 @@ import QNPublishStatus from "qnwxapp-rtc"
 // index.js
 // 获取应用实例
 const app = getApp()
-const client = QNRTC.createClient()
+var client
 Page({
 
-  // handleStateChange(e) {     //监听推流是否成功
-  //   QNRTC.updatePusherStateChange(e);
-  //   console.log('live-pusher code:', e.detail.code)
-  // },
-  handlePusherStateChange(e) {
+  handlePusherStateChange(e) {          //监听推流状态码
     QNRTC.updatePusherStateChange(e);
     console.log("pusher state", e.detail.code, e.detail.message);
   },
@@ -36,7 +32,6 @@ Page({
     subscribeList: [],
     item: '',
     shopName: "店铺名称",
-    // fit:false,
     menuHeight: 0,
     menuTop: 0,
     navBarHeight: 0,
@@ -54,11 +49,11 @@ Page({
     loginOk: false,    //后台登录状态，默认为false
     enter: false,       //是否在店内
 
-
     displaygua: 'display: none',    //挂断button状态
-    expireAt: '',
-    roomName: '001',
-    userId: 'aaa',
+
+    expireAt: '',          //通话结束时间
+    roomName: '001',       //roomName
+    userId: 'ccc',         //userId
     roomToken: '',
   },
 
@@ -74,16 +69,8 @@ Page({
     })
   },
 
-  getpublishPath() {                                //获取发布地址
-
+  getpublishPath() {                           //获取发布地址
     console.log(client);
-    console.log(client.appId);
-    console.log(client.rtmphost);
-    console.log(client.rtmptoken);
-    console.log(client.roomName);
-    console.log(client.userId);
-    console.log(client.rtmphost);
-    console.log(11111111111111);
     client.publish((status, data) => {
       console.log("callback: publish - 发布后回调", status, data);
       if (status === "READY") {
@@ -101,30 +88,18 @@ Page({
         console.log("发布失败")
       }
     })
-    client.on('user-published', async (userID, tracks) => {
-      const url = await client.subscribe({
-        videoTrack: tracks.find(track => track.isVideo()),
-        audioTrack: tracks.find(track => track.isAudio())
-      })
-      this.setData({
-        subscribeList: [...this.data.subscribeList, url]
-      })
-    });
-    // clearInterval(mytimes)
-    // }
-    // }, 1000);
   },
 
 
   cancleCsao() {           //扫一扫
-    const client = QNRTC.createClient();
+    client = QNRTC.createClient();    //创建新通讯项目
     console.log(QNRTC.VERSION)
     console.log(client);
     let date = new Date()
     let b = date.getTime()
     let c = b + 3600000
     let d = c.toString()
-    let e = d.substring(0, 10)
+    let e = d.substring(0, 10)      //获得roomtoken的结束时间,在当前时间的1小时后
     console.log(e);
     this.setData({
       loginOk: true,
@@ -148,10 +123,9 @@ Page({
           roomToken: res.data.data,
         })
         console.log(res);
-        // _this.getpublishPath()
       }
     })
-    client.on('user-published', async (userID, tracks) => {
+    client.on('user-published', async (userID, tracks) => {     //获取订阅地址
       const url = await client.subscribe({
         videoTrack: tracks.find(track => track.isVideo()),
         audioTrack: tracks.find(track => track.isAudio())
@@ -172,7 +146,7 @@ Page({
       mask: true,
       fail: (data) => console.log("fail", data),
     });
-    console.log(this.data.client);
+    console.log(client);
     console.log(this.data.roomToken);
     await client.join(this.data.roomToken)
     this.getpublishPath()
