@@ -74,35 +74,41 @@
 
 <!-- 进入页面的弹窗，登录页面 -->
 <block wx:if="{{!hasUserInfo}}">
-	<view class="falogin" catchtouchmove='false'></view>
-	<view class="login">
-		<view class="faimage1">
-			<image src="/image/guanbi.png" class="image1" bindtap="cancleClick"></image>
-		</view>
+  <view class="falogin" catchtouchmove='false'></view>
+  <view class="login">
+    <view class="faimage1">
+      <image src="/image/guanbi.png" class="image1" bindtap="cancleClick"></image>
+    </view>
 
-		<image src="" class="image2"></image>
+    <image src="" class="image2"></image>
 
-		<view class="lr1">无人自助</view>
-		<view class="lr1"> 安全登录确认</view>
-		<button bindtap="getUserProfile" style="width: 80%;">登录</button>
-	</view>
+    <view class="lr1">无人自助</view>
+    <view class="lr1"> 安全登录确认</view>
+    <button bindtap="getUserProfile" style="width: 80%;">登录</button>
+  </view>
 </block>
 
 <!-- 扫码进店、呼叫客服页面 -->
 <block wx:if="{{loginOk && enter}}">
+  <view>
+    <live-pusher mode="RTC" url="{{publishPath}}" bindstatechange="handleStateChange">
+    </live-pusher>
+    <live-player autoplay src="{{item}}" mode="RTC" wx:for="{{subscribeList}}">
+    </live-player>
+  </view>
   <view class="falogin" catchtouchmove='false'></view>
   <view class="faenter">
 
     <view class="enter">
       <view class="view1" bindtap="cancleCall">
-        <view style="margin-top: 40rpx;" >
+        <view style="margin-top: 40rpx;">
           <image src="/image/hujiao1.png" style="margin: 0 auto; display: block;"></image>
           <view style="text-align: center;">呼叫客服</view>
         </view>
 
       </view>
       <view class="view2" bindtap="enterClick">
-        <view style="margin-top: 40rpx;" >
+        <view style="margin-top: 40rpx;">
           <image src="/image/kaimen.png" style="margin: 0 auto; display: block;"></image>
           <view style="text-align: center;">扫码进店</view>
         </view>

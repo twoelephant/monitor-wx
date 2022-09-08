@@ -45,6 +45,7 @@ Page({
       let a = parseFloat(item.price) * parseInt(item.num)
       newtotal += a
     })
+    newtotal = Math.floor(newtotal*100)/100
     this.setData(
       { total: newtotal }
     )

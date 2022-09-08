@@ -2,6 +2,7 @@
   "name": "monitor-wx",
   "private": true,
   "dependencies": {
+    "pili-rtc-wxapp": "^1.2.3",
     "qnwxapp-rtc": "^4.0.6"
   },
   "version": "1.0.0",

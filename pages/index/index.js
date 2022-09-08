@@ -1,12 +1,21 @@
 import QNRTC from 'qnwxapp-rtc'
-console.log(QNRTC.VERSION)
-const client = QNRTC.createClient()
+import QNPublishStatus from "qnwxapp-rtc"
+
 // index.js
 // 获取应用实例
 const app = getApp()
-
+const client = QNRTC.createClient()
 Page({
+
+  handleStateChange(e) {     //监听推流是否成功
+    console.log('live-pusher code:', e.detail.code)
+  },
+
   data: {
+    localTracks: '',
+    publishPath: '',
+    subscribeList: [],
+    // item:'',
     shopName: "店铺名称",
     // fit:false,
     menuHeight: 0,
@@ -24,13 +33,13 @@ Page({
     //用户信息
     hasUserInfo: false,//是否获取到用户信息，默认为false
     loginOk: false,    //后台登录状态，默认为false
-    enter:false,       //是否在店内
-  
-    
+    enter: false,       //是否在店内
+
+
     displaygua: 'display: none',    //挂断button状态
     expireAt: '',
     roomName: '001',
-    userId: '002',
+    userId: 'ccc',
     roomToken: '',
   },
 
@@ -45,7 +54,39 @@ Page({
       loginOk: false,
     })
   },
+
+  getpublishPath() {
+    client.publish((status, data) => {
+      console.log("callback: publish - 发布后回调", status, data);
+      if (status === "READY") {
+        console.log(data.url);
+        this.setData({
+          publishPath: data.url
+        })
+        console.log(this.data.publishPath);
+      } else if (status === QNPublishStatus.COMPLETED) {
+        this.setData({
+          localTracks: data.tracks
+        })
+        console.log(this.data.localTracks);
+      } else if (status === QNPublishStatus.ERROR) {
+        console.log("发布失败")
+      }
+    })
+    client.on('user-published', async (userID, tracks) => {
+      const url = await client.subscribe({
+        videoTrack: tracks.find(track => track.isVideo()),
+        audioTrack: tracks.find(track => track.isAudio())
+      })
+      this.setData({
+        subscribeList: [...this.data.subscribeList, url]
+      })
+    });
+  },
+
+
   cancleCsao() {           //扫一扫
+    console.log(QNRTC.VERSION)
     let date = new Date()
     let b = date.getTime()
     let c = b + 3600000
@@ -65,22 +106,28 @@ Page({
       },
       data: {
         roomName: _this.data.roomName,
-        userId: _this.data.roomName,
+        userId: _this.data.userId,
         expireAt: _this.data.expireAt
       },
       success(res) {
         _this.setData({
           roomToken: res.data.data
         })
+        console.log(res);
+        _this.getpublishPath()
       }
     })
   },
+
+  
+
   cancleCall() {          //呼叫客服
     client.join(this.data.roomToken)
 
     this.setData({
       displaygua: 'display: '
     })
+
   },
   enterClick() { //开门进店
     console.log("开门进店")
