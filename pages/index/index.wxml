@@ -125,7 +125,7 @@
     </view>
 
     <view class="faimage3">
-      <image src="/image/guanbi1.png" bindtap="cancleClick1"></image>
+      <image src="/image/guanbi1.png" bindtap="cancleClick1" style="{{displaygua1}}"></image>
     </view>
     <view class="guaduan" style="{{displaygua}}" bindtap="cancleCgd">
       <image src="/image/guaduan.png"></image>

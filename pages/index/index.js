@@ -50,11 +50,14 @@ Page({
     enter: false,       //是否在店内
 
     displaygua: 'display: none',    //挂断button状态
+    displaygua1: 'display: ',    //挂断button状态
 
     expireAt: '',          //通话结束时间
     roomName: '001',       //roomName
     userId: 'ccc',         //userId
     roomToken: '',
+
+    display:''
   },
 
   cancleClick() {
@@ -151,7 +154,9 @@ Page({
     await client.join(this.data.roomToken)
     this.getpublishPath()
     this.setData({
-      displaygua: 'display: '
+      displaygua: 'display: ',
+      displaygua1: 'display: none'
+      
     })
 
     console.log(client);
@@ -163,7 +168,8 @@ Page({
   cancleCgd() {             //挂断
     client.leave()
     this.setData({
-      displaygua: 'display: none'
+      displaygua: 'display: none',
+      displaygua1:'display:'
     })
   },
   getUserProfile(e) {
@@ -214,7 +220,7 @@ Page({
   //开启公告字幕滚动动画
   initAnimation() {
     let that = this
-    this.data.duration = 15000
+    this.data.duration = 30000  //调整字幕滚动速度
     this.data.animation = wx.createAnimation({
       duration: this.data.duration,
       timingFunction: 'linear'
