@@ -7,11 +7,28 @@ const app = getApp()
 const client = QNRTC.createClient()
 Page({
 
-  handleStateChange(e) {     //监听推流是否成功
-    console.log('live-pusher code:', e.detail.code)
+  // handleStateChange(e) {     //监听推流是否成功
+  //   QNRTC.updatePusherStateChange(e);
+  //   console.log('live-pusher code:', e.detail.code)
+  // },
+  handlePusherStateChange(e) {
+    QNRTC.updatePusherStateChange(e);
+    console.log("pusher state", e.detail.code, e.detail.message);
+  },
+  handlerPusherNetStatus(e) {
+    QNRTC.updatePusherNetStatus(e);
+    console.log(
+      "pusher net status",
+      "videoBitrate: ",
+      e.detail.info.videoBitrate,
+      "audioBitrate: ",
+      e.detail.info.audioBitrate
+    );
   },
 
   data: {
+    // client: null,
+    pushContext: null,
     localTracks: '',
     publishPath: '',
     subscribeList: [],
@@ -55,33 +72,68 @@ Page({
     })
   },
 
-  getpublishPath() {
-    client.publish((status, data) => {
-      console.log("callback: publish - 发布后回调", status, data);
-      if (status === "READY") {
-        console.log(data.url);
-        this.setData({
-          publishPath: data.url
+  getpublishPath() {                                //获取发布地址
+    // this.setData({
+    //   client
+    // });
+    console.log(client);
+    // setTimeout(() => {
+    console.log(client.appId);
+    console.log(client.rtmphost);
+    console.log(client.rtmptoken);
+    console.log(client.roomName);
+    console.log(client.userId);
+    console.log(client.rtmphost);
+    let mytimes = setInterval(() => {
+      if (client.rtmphost != "" && client.rtmphost != null && client.rtmphost != undefined) {
+        console.log(11111111111111);
+        client.publish((status, data) => {
+          console.log("callback: publish - 发布后回调", status, data);
+          if (status === "READY") {
+            console.log(data);
+            console.log(data.url);
+            this.setData({
+              publishPath: data.url
+            })
+            // console.log(purl);
+            console.log(this.data.publishPath);
+          } else if (status === "COMPLETED") {
+            console.log("local-track-add", data.tracks);
+            const remoteTracks = [...data.tracks];
+            const _this = this
+            remoteTracks.forEach(item => {
+              item.isLocal = true;
+              item.h = 100;
+              item.w = 100;
+              item.x = 0;
+              item.y = 0;
+              item.z = 0;
+              item.stretchMode = 0;
+            })
+            _this.setData({
+              remoteTracks: [..._this.data.remoteTracks, ...remoteTracks],
+            });
+          }
         })
-        console.log(this.data.publishPath);
-      } else if (status === QNPublishStatus.COMPLETED) {
-        this.setData({
-          localTracks: data.tracks
-        })
-        console.log(this.data.localTracks);
-      } else if (status === QNPublishStatus.ERROR) {
-        console.log("发布失败")
+        clearInterval(mytimes)
       }
-    })
-    client.on('user-published', async (userID, tracks) => {
-      const url = await client.subscribe({
-        videoTrack: tracks.find(track => track.isVideo()),
-        audioTrack: tracks.find(track => track.isAudio())
-      })
-      this.setData({
-        subscribeList: [...this.data.subscribeList, url]
-      })
-    });
+    }, 1000);
+
+
+    // }, 5000);
+
+    // let purl = `rtmp://${client.rtmphost}?rtmptoken=${client.rtmptoken}&playerid=${client.userId}`
+    // console.log(purl);
+
+    // client.on('user-published', async (userID, tracks) => {
+    //   const url = await client.subscribe({
+    //     videoTrack: tracks.find(track => track.isVideo()),
+    //     audioTrack: tracks.find(track => track.isAudio())
+    //   })
+    //   this.setData({
+    //     subscribeList: [...this.data.subscribeList, url]
+    //   })
+    // });
   },
 
 
@@ -92,6 +144,7 @@ Page({
     let c = b + 3600000
     let d = c.toString()
     let e = d.substring(0, 10)
+    console.log(e);
     this.setData({
       loginOk: true,
       enter: true,
@@ -111,23 +164,36 @@ Page({
       },
       success(res) {
         _this.setData({
-          roomToken: res.data.data
+          roomToken: res.data.data,
         })
         console.log(res);
-        _this.getpublishPath()
+        // _this.getpublishPath()
       }
     })
   },
 
-  
+
 
   cancleCall() {          //呼叫客服
+    // const userid = 001;
+    // const room = 001;
+    this.pushContext = wx.createLivePusherContext();
+    // this.setData({ pushContext: this.pushContext });
+    // wx.showToast({
+    //   title: "加入房间中",
+    //   icon: "loading",
+    //   mask: true,
+    //   fail: (data) => console.log("fail", data),
+    // });
+    // console.log(this.data.client);
+    // console.log(this.data.roomToken);
     client.join(this.data.roomToken)
-
+    this.getpublishPath()
     this.setData({
       displaygua: 'display: '
     })
 
+    console.log(client);
   },
   enterClick() { //开门进店
     console.log("开门进店")
