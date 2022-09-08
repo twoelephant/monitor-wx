@@ -27,12 +27,14 @@ Page({
   },
 
   data: {
+    camera: false,
+    userList: [],
     // client: null,
     pushContext: null,
     localTracks: '',
     publishPath: '',
     subscribeList: [],
-    // item:'',
+    item: '',
     shopName: "店铺名称",
     // fit:false,
     menuHeight: 0,
@@ -73,72 +75,51 @@ Page({
   },
 
   getpublishPath() {                                //获取发布地址
-    // this.setData({
-    //   client
-    // });
+
     console.log(client);
-    // setTimeout(() => {
     console.log(client.appId);
     console.log(client.rtmphost);
     console.log(client.rtmptoken);
     console.log(client.roomName);
     console.log(client.userId);
     console.log(client.rtmphost);
-    let mytimes = setInterval(() => {
-      if (client.rtmphost != "" && client.rtmphost != null && client.rtmphost != undefined) {
-        console.log(11111111111111);
-        client.publish((status, data) => {
-          console.log("callback: publish - 发布后回调", status, data);
-          if (status === "READY") {
-            console.log(data);
-            console.log(data.url);
-            this.setData({
-              publishPath: data.url
-            })
-            // console.log(purl);
-            console.log(this.data.publishPath);
-          } else if (status === "COMPLETED") {
-            console.log("local-track-add", data.tracks);
-            const remoteTracks = [...data.tracks];
-            const _this = this
-            remoteTracks.forEach(item => {
-              item.isLocal = true;
-              item.h = 100;
-              item.w = 100;
-              item.x = 0;
-              item.y = 0;
-              item.z = 0;
-              item.stretchMode = 0;
-            })
-            _this.setData({
-              remoteTracks: [..._this.data.remoteTracks, ...remoteTracks],
-            });
-          }
+    console.log(11111111111111);
+    client.publish((status, data) => {
+      console.log("callback: publish - 发布后回调", status, data);
+      if (status === "READY") {
+        console.log(data);
+        console.log(data.url);
+        this.setData({
+          publishPath: data.url
         })
-        clearInterval(mytimes)
+        console.log(this.data.publishPath);
+      } else if (status === QNPublishStatus.COMPLETED) {
+        this.setData({
+          localTracks: data.tracks
+        })
+      } else if (status === QNPublishStatus.ERROR) {
+        console.log("发布失败")
       }
-    }, 1000);
-
-
-    // }, 5000);
-
-    // let purl = `rtmp://${client.rtmphost}?rtmptoken=${client.rtmptoken}&playerid=${client.userId}`
-    // console.log(purl);
-
-    // client.on('user-published', async (userID, tracks) => {
-    //   const url = await client.subscribe({
-    //     videoTrack: tracks.find(track => track.isVideo()),
-    //     audioTrack: tracks.find(track => track.isAudio())
-    //   })
-    //   this.setData({
-    //     subscribeList: [...this.data.subscribeList, url]
-    //   })
-    // });
+    })
+    client.on('user-published', async (userID, tracks) => {
+      const url = await client.subscribe({
+        videoTrack: tracks.find(track => track.isVideo()),
+        audioTrack: tracks.find(track => track.isAudio())
+      })
+      this.setData({
+        subscribeList: [...this.data.subscribeList, url]
+      })
+    });
+    // clearInterval(mytimes)
+    // }
+    // }, 1000);
   },
 
 
   cancleCsao() {           //扫一扫
+    const client = QNRTC.createClient();
     console.log(QNRTC.VERSION)
+    console.log(client);
     let date = new Date()
     let b = date.getTime()
     let c = b + 3600000
@@ -170,24 +151,30 @@ Page({
         // _this.getpublishPath()
       }
     })
+    client.on('user-published', async (userID, tracks) => {
+      const url = await client.subscribe({
+        videoTrack: tracks.find(track => track.isVideo()),
+        audioTrack: tracks.find(track => track.isAudio())
+      })
+      this.setData({
+        subscribeList: [...this.data.subscribeList, url]
+      })
+    });
   },
 
 
-
-  cancleCall() {          //呼叫客服
-    // const userid = 001;
-    // const room = 001;
+  async cancleCall() {          //呼叫客服
     this.pushContext = wx.createLivePusherContext();
-    // this.setData({ pushContext: this.pushContext });
-    // wx.showToast({
-    //   title: "加入房间中",
-    //   icon: "loading",
-    //   mask: true,
-    //   fail: (data) => console.log("fail", data),
-    // });
-    // console.log(this.data.client);
-    // console.log(this.data.roomToken);
-    client.join(this.data.roomToken)
+    this.setData({ pushContext: this.pushContext });
+    wx.showToast({
+      title: "呼叫中",
+      icon: "loading",
+      mask: true,
+      fail: (data) => console.log("fail", data),
+    });
+    console.log(this.data.client);
+    console.log(this.data.roomToken);
+    await client.join(this.data.roomToken)
     this.getpublishPath()
     this.setData({
       displaygua: 'display: '
@@ -293,4 +280,5 @@ Page({
       timer
     })
   },
+
 })

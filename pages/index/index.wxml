@@ -92,8 +92,9 @@
 <block wx:if="{{loginOk && enter}}">
   <view>
     <live-pusher 
-    autopush 
+    autopush
     mode="RTC" 
+    enable-camera="{{camera}}"
     url="{{publishPath}}" 
     push-context="{{pushContext}}"
     bindstatechange="handlePusherStateChange" 
