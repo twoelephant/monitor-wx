@@ -58,7 +58,7 @@ Page({
     displaygua: 'display: none',    //挂断button状态
     expireAt: '',
     roomName: '001',
-    userId: 'ccc',
+    userId: 'aaa',
     roomToken: '',
   },
 
