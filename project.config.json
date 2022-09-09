@@ -46,11 +46,12 @@
     "useStaticServer": true,
     "checkInvalidKey": true,
     "disableUseStrict": false,
-    "useCompilerPlugins": false
+    "useCompilerPlugins": false,
+    "ignoreUploadUnusedFiles": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.17.0",
-  "appid": "wx0eb2b89342f1117d",
+  "appid": "wx06988931645bcf84",
   "projectname": "miniprogram-92",
   "condition": {},
   "editorSetting": {

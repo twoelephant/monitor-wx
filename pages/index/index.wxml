@@ -127,6 +127,8 @@
     <view class="faimage3">
       <image src="/image/guanbi1.png" bindtap="cancleClick1" style="{{showOther}}"></image>
     </view>
+    <view class="callTime" wx:if="{{!showTime}}" style="{{hangUp}}" >等待中</view>
+    <view class="callTime" wx:if="{{showTime}}"> {{minute}}:{{second}}</view>
     <view class="guaduan" style="{{hangUp}}" bindtap="cancleCgd">
       <image src="/image/guaduan.png"></image>
     </view>

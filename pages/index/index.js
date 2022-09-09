@@ -5,13 +5,14 @@ import QNPublishStatus from "qnwxapp-rtc"
 // 获取应用实例
 const app = getApp()
 let client
+let callTimer
 Page({
 
   handlePusherStateChange(e) { //监听推流状态码
     QNRTC.updatePusherStateChange(e);
     console.log("pusher state", e.detail.code, e.detail.message);
   },
-  handlerPusherNetStatus(e) {
+  handlerPusherNetStatus(e) {        //监听推流数据
     QNRTC.updatePusherNetStatus(e);
     console.log(
       "pusher net status",
@@ -56,7 +57,10 @@ Page({
     roomName: '001', //roomName
     userId: 'ccc', //userId
     roomToken: '',
-    display: ''
+    display: '',
+    minute: '00',
+    second: '00',
+    showTime:false
   },
 
   cancleClick() {
@@ -148,25 +152,35 @@ Page({
       mask: true,
       fail: (data) => console.log("fail", data),
     });
-    await client.join(this.data.roomToken)
-    this.getpublishPath()
+    await client.join(this.data.roomToken)    //加入房间，并通过roomToken传入所需数据
+    this.getpublishPath()                   //获取发布地址
     this.setData({
       hangUp: 'display: ',
       showOther: 'display: none'
 
     })
-
     console.log(client);
+    client.on("user-joined", (user) => {    //监听是否有用户进房间，即是否连接上客服
+      this.setData({
+        showTime:true
+      })
+      this.callTime()
+    });
   },
+
   enterClick() { //开门进店
     console.log("开门进店")
 
   },
   cancleCgd() { //挂断
     client.leave()
+    clearInterval(callTimer)
     this.setData({
       hangUp: 'display: none',
-      showOther: 'display:'
+      showOther: 'display:',
+      minute: '00',
+      second: '00',
+      showTime:false
     })
   },
   getUserProfile(e) {
@@ -258,4 +272,28 @@ Page({
     })
   },
 
+  // 通话时间
+  callTime() {
+    let i = 0
+    let j = 0
+    callTimer = setInterval(() => {
+      if (i < 61) {
+        let s = i.toString().padStart(2, '0')
+        let k = j.toString().padStart(2, '0')
+        this.setData({
+          'second': s,
+          'minute': k
+        })
+        i++
+      }
+      if (i == 61) {
+        this.setData({
+          'second': 60
+        })
+        i = 0
+        j++
+      }
+
+    }, 1000);
+  }
 })
